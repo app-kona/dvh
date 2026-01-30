@@ -10,213 +10,145 @@
     <style>
         body { font-family: 'Noto Sans JP', sans-serif; color: #4a4a4a; scroll-behavior: smooth; }
         .font-mincho { font-family: 'Shippori Mincho', serif; }
-        .hero-gradient { background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)); }
+        .hero-gradient { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)); }
         .bg-cream { background-color: #fdfaf6; }
         .text-accent { color: #8d745a; }
         .bg-accent { background-color: #8d745a; }
         .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); }
-        .sticky-cta { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 400px; z-index: 50; }
+        .parallax-bg { background-attachment: fixed; background-position: center; background-size: cover; }
     </style>
 </head>
 <body class="bg-white">
 
-    <header class="py-4 px-6 flex justify-between items-center border-b border-gray-100 sticky top-0 bg-white z-40">
+    <header class="py-4 px-6 flex justify-between items-center border-b border-gray-100 sticky top-0 bg-white z-50">
         <a href="/">
             <img src="images/logo.svg" alt="Dog Villa Holoholo" class="h-8 md:h-10 w-auto">
         </a>
-        <a href="#booking" class="text-sm font-bold border-b-2 border-accent">空室確認</a>
+        <nav class="hidden md:flex gap-6 text-sm font-bold">
+            <a href="#concept">Concept</a>
+            <a href="#features">Features</a>
+            <a href="#plan">Plan</a>
+            <a href="#gallery">Gallery</a>
+        </nav>
+        <a href="#booking" class="text-sm font-bold border-b-2 border-accent">Reserve</a>
     </header>
 
-    <section class="relative h-[85vh] flex items-center justify-center overflow-hidden">
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0">
-            <img src="https://images.unsplash.com/photo-1544436484-635c0937a092?q=80&w=2070&auto=format&fit=crop" alt="室内ダイニング" class="w-full h-full object-cover">
+            <img src="images/slide1.webp" alt="Dog Villa Holoholo 外観" class="w-full h-full object-cover">
             <div class="absolute inset-0 hero-gradient"></div>
         </div>
         <div class="relative z-10 text-center text-white px-4">
-            <p class="text-lg md:text-xl mb-4 font-light tracking-widest">淡路島・西海岸 1日1組限定</p>
-            <h2 class="text-3xl md:text-5xl font-mincho font-bold leading-tight mb-6">
-                ずっと、同じ目線で笑っていよう。<br>
-                <span class="text-2xl md:text-3xl">愛犬も、子供も、家族みんなが主役。</span>
+            <p class="text-lg md:text-2xl mb-4 font-light tracking-widest font-mincho">海・山・空・大地</p>
+            <h2 class="text-4xl md:text-6xl font-mincho font-bold leading-tight mb-8">
+                今日一日は、<br>「Holoholo」のオーナーです。
             </h2>
-            <p class="text-sm md:text-base mb-8 leading-relaxed opacity-90">
-                ドッグランが広いだけじゃない。<br>
-                新設された「低めダイニング」が、家族の団らんを室内に連れてきた。
-            </p>
-            <a href="#booking" class="inline-block bg-white text-accent px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition duration-300">
-                空室状況を確認する
+            <a href="#booking" class="inline-block bg-white text-accent px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition duration-300">
+                Web予約はこちら
             </a>
         </div>
     </section>
 
-    <section class="py-20 px-6 bg-cream">
-        <div class="max-w-3xl mx-auto text-center">
-            <h3 class="text-2xl font-mincho font-bold mb-10 text-accent">
-                犬と子供の旅行、<br class="md:hidden">結局リビングでバタバタしていませんか？
-            </h3>
-            <div class="space-y-6 text-left inline-block mx-auto">
-                <div class="flex items-start">
-                    <span class="text-accent mr-3">✕</span>
-                    <p>ローテーブルだと、愛犬が食べ物を狙ってしまうので食事が落ち着かない。</p>
-                </div>
-                <div class="flex items-start">
-                    <span class="text-accent mr-3">✕</span>
-                    <p>床に荷物が散らかり、子供が転んだり愛犬が誤飲しないかヒヤヒヤする。</p>
-                </div>
-                <div class="flex items-start">
-                    <span class="text-accent mr-3">✕</span>
-                    <p>雨の日や夜は、狭いソファでスマホを見るだけで終わってしまう。</p>
-                </div>
+    <section id="concept" class="py-24 px-6 bg-cream">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
+            <div class="md:w-1/2">
+                <span class="text-accent font-bold tracking-widest uppercase text-sm">Concept</span>
+                <h3 class="text-3xl font-mincho font-bold mt-4 mb-8 leading-tight">約600㎡の広大な敷地を<br>一日あなたにお貸しする。</h3>
+                <p class="leading-relaxed mb-6">「Holoholo」とはハワイ語でお散歩やぶらぶらするという意味を持ちます。気取らず自由度が高いのが特徴です。愛犬や大切な人と、プライベート空間で忘れられない思い出時間をお過ごしください。</p>
             </div>
-            <div class="mt-12 p-8 bg-white rounded-2xl card-shadow">
-                <p class="font-bold text-lg text-accent leading-relaxed">
-                    Holoholoは、そんな「パパ・ママの心の忙しさ」を、間取りで解決しました。
-                </p>
+            <div class="md:w-1/2">
+                <img src="images/concept-img.webp" alt="Concept Image" class="rounded-3xl shadow-2xl">
             </div>
         </div>
     </section>
 
-    <section class="py-20 px-6">
-        <div class="max-w-5xl mx-auto">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="w-full md:w-1/2">
-                    <span class="inline-block bg-accent text-white px-3 py-1 text-sm mb-4">NEW UPDATE</span>
-                    <h3 class="text-3xl font-mincho font-bold mb-6 leading-tight">
-                        室内に「低めのダイニング」を新設。<br>
-                        “外だけじゃない”心地よさ。
-                    </h3>
-                    <p class="mb-6 leading-relaxed">
-                        ソファ中心だった空間に、あえて「低めのダイニングテーブル」を導入しました。椅子に座って、家族が向かい合える。それだけで旅の質は変わります。
-                    </p>
-                    <ul class="space-y-4">
-                        <li class="flex items-center">
-                            <svg class="w-6 h-6 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span><strong>安心の高さ：</strong> 愛犬の顔には近く、でもテーブルには届かない。</span>
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-6 h-6 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span><strong>ゆとりの広さ：</strong> 家族4人で地元の幸を囲める十分なスペース。</span>
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-6 h-6 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span><strong>床の解放：</strong> 荷物を上に置けるから、足元は愛犬の遊び場に。</span>
-                        </li>
-                    </ul>
+    <section id="features" class="relative py-32 parallax-bg" style="background-image: url('images/features-bg.webp');">
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="relative z-10 max-w-5xl mx-auto px-6 text-white text-center">
+            <h3 class="text-3xl md:text-5xl font-mincho font-bold mb-12">Holoholoの特徴</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
+                    <h4 class="text-xl font-bold mb-4">1日1組限定・完全貸切</h4>
+                    <p class="text-sm">他の宿泊客を気にせず、あなたたちだけの王国として自由にお過ごしいただけます。</p>
                 </div>
-                <div class="w-full md:w-1/2">
-                    <div class="aspect-square bg-gray-200 rounded-3xl overflow-hidden relative">
-                         <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop" alt="低めのダイニング" class="w-full h-full object-cover">
-                         <div class="absolute bottom-4 right-4 bg-white/80 backdrop-blur px-4 py-2 rounded-full text-xs font-bold">
-                             ※2024年 室内リニューアル完了
-                         </div>
-                    </div>
+                <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
+                    <h4 class="text-xl font-bold mb-4">天然芝ドッグラン</h4>
+                    <p class="text-sm">淡路島の風を感じる広大な芝生で、愛犬が体力の続くまで走り回れます。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 px-6 bg-cream">
-        <div class="max-w-5xl mx-auto">
-            <h3 class="text-center text-3xl font-mincho font-bold mb-16">Holoholoが選ばれる4つの理由</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-3xl card-shadow">
-                    <div class="text-accent text-3xl font-bold mb-4">01</div>
-                    <h4 class="text-xl font-bold mb-4">1日1組限定・完全貸切の「解放区」</h4>
-                    <p class="text-sm leading-relaxed">他の宿泊客や犬との接触を気にしなくていい。吠えても、走り回っても、ここはあなたたちだけの王国です。</p>
-                </div>
-                <div class="bg-white p-8 rounded-3xl card-shadow">
-                    <div class="text-accent text-3xl font-bold mb-4">02</div>
-                    <h4 class="text-xl font-bold mb-4">約600㎡の天然芝ドッグラン</h4>
-                    <p class="text-sm leading-relaxed">淡路島の風を感じる広大な芝生。多頭飼いや元気なお子様でも、体力が尽きるまで遊び尽くせます。</p>
-                </div>
-                <div class="bg-white p-8 rounded-3xl card-shadow">
-                    <div class="text-accent text-3xl font-bold mb-4">03</div>
-                    <h4 class="text-xl font-bold mb-4">リビングから外へ、シームレスな動線</h4>
-                    <p class="text-sm leading-relaxed">「外で遊ぶ犬」と「中で料理するママ」。どこにいても家族の気配を感じ、声をかけ合える一体感のある設計。</p>
-                </div>
-                <div class="bg-white p-8 rounded-3xl card-shadow">
-                    <div class="text-accent text-3xl font-bold mb-4">04</div>
-                    <h4 class="text-xl font-bold mb-4">西海岸の夕日を特等席で</h4>
-                    <p class="text-sm leading-relaxed">BBQテラスから眺める夕陽は格別。夜は新設のダイニングで、星空の下の余韻を楽しんでください。</p>
+    <section id="plan" class="py-24 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl h-[500px] flex items-center justify-center text-white text-center">
+                <img src="images/plan-bg.webp" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black/30"></div>
+                <div class="relative z-10">
+                    <span class="font-bold tracking-widest uppercase text-sm">Holoholo Plan</span>
+                    <h3 class="text-4xl font-mincho font-bold mt-4 mb-8">自由な使い方で楽しむ</h3>
+                    <p class="max-w-xl mx-auto mb-10">BBQ、釣り、キャンプギア。1棟貸しだからこそできる、あなただけの宿泊スタイルを見つけてください。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 px-6">
-        <div class="max-w-5xl mx-auto">
-            <h3 class="text-center text-2xl md:text-3xl font-mincho font-bold mb-12 italic">Enjoy Your Stay</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="relative rounded-2xl overflow-hidden h-80 group">
-                    <img src="https://images.unsplash.com/photo-1596462502278-27bfad4575a6?q=80&w=1760&auto=format&fit=crop" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black/30 flex items-end p-6">
-                        <div class="text-white"><p class="text-xs font-bold mb-1">雨の日でも</p><h5 class="font-bold">家族の思い出は止まらない</h5></div>
-                    </div>
-                </div>
-                <div class="relative rounded-2xl overflow-hidden h-80 group">
-                    <img src="https://images.unsplash.com/photo-1517646281553-9b9341ef0a12?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black/30 flex items-end p-6">
-                        <div class="text-white"><p class="text-xs font-bold mb-1">子供が寝たあと</p><h5 class="font-bold">夫婦だけのバータイム</h5></div>
-                    </div>
-                </div>
-                <div class="relative rounded-2xl overflow-hidden h-80 group">
-                    <img src="https://images.unsplash.com/photo-1504851149312-7a075b496cc7?q=80&w=1905&auto=format&fit=crop" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black/30 flex items-end p-6">
-                        <div class="text-white"><p class="text-xs font-bold mb-1">平日なら</p><h5 class="font-bold">究極のワーケーション</h5></div>
-                    </div>
-                </div>
+    <section class="py-24 px-6 bg-cream">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row-reverse items-center gap-16">
+            <div class="md:w-1/2">
+                <span class="text-accent font-bold tracking-widest uppercase text-sm">Around Holoholo</span>
+                <h3 class="text-3xl font-mincho font-bold mt-4 mb-8 leading-tight">淡路島は魅力がいっぱい</h3>
+                <p class="leading-relaxed">西海岸ならではの夕日をただ眺める贅沢。近隣の漁港での釣りや、おすすめのショップ巡りなど、周辺環境も充実しています。</p>
+            </div>
+            <div class="md:w-1/2">
+                <img src="images/around-bg.webp" alt="Around Holoholo" class="rounded-3xl shadow-xl">
             </div>
         </div>
     </section>
 
-    <section class="py-20 px-6 bg-cream">
-        <div class="max-w-3xl mx-auto">
-            <h3 class="text-center text-2xl font-bold mb-12">よくある質問</h3>
-            <div class="space-y-4">
-                <div class="bg-white p-6 rounded-xl">
-                    <p class="font-bold text-accent mb-2">Q. 子どもがいても大丈夫？</p>
-                    <p class="text-sm">A. 大歓迎です！家族利用を想定した一棟貸しですので、備品等も配慮しております。</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl">
-                    <p class="font-bold text-accent mb-2">Q. 雨の日でも楽しめますか？</p>
-                    <p class="text-sm">A. はい。室内での食事が快適になったため、天候に左右されず満喫いただけます。</p>
-                </div>
+    <section id="gallery" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-center text-3xl font-mincho font-bold mb-16">Gallery</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="images/gallery_img1.webp" class="rounded-xl aspect-square object-cover">
+                <img src="images/gallery_img2.webp" class="rounded-xl aspect-square object-cover">
+                <img src="images/gallery_img3.webp" class="rounded-xl aspect-square object-cover">
+                <img src="images/gallery_img4.webp" class="rounded-xl aspect-square object-cover">
+                <img src="images/gallery_img5.webp" class="rounded-xl aspect-square object-cover">
+                <img src="images/gallery_img6.webp" class="rounded-xl aspect-square object-cover">
+                <img src="images/gallery_img10.webp" class="rounded-xl aspect-square object-cover">
+                <img src="images/gallery_img11.webp" class="rounded-xl aspect-square object-cover">
             </div>
         </div>
     </section>
 
-    <footer id="booking" class="bg-gray-900 text-white py-20 px-6">
-        <div class="max-w-3xl mx-auto text-center">
-            <h3 class="text-2xl md:text-3xl font-mincho font-bold mb-6">愛犬の、弾けるような笑顔が見たくなったら。</h3>
-            <div class="flex flex-col gap-4 mb-16">
-                <a href="https://awaji-holoholo.jp/" target="_blank" class="bg-accent hover:bg-opacity-90 text-white px-8 py-5 rounded-full font-bold text-lg transition duration-300">公式サイトで空室を確認する</a>
+    <section class="relative py-32 bg-gray-900 text-white overflow-hidden">
+        <img src="images/access-bg.webp" class="absolute inset-0 w-full h-full object-cover opacity-30">
+        <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+            <h3 class="text-3xl font-mincho font-bold mb-8">Access</h3>
+            <p class="text-lg mb-4">〒656-1501 兵庫県淡路市尾崎６２０</p>
+            <p class="text-sm opacity-80 mb-12">神戸淡路鳴門自動車道 北淡ICをおりて南へ約10分。</p>
+            <div class="aspect-video bg-white/10 rounded-2xl backdrop-blur flex items-center justify-center">
+                <p class="text-white/40">Google Maps Area</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="booking" class="bg-white py-20 px-6 border-t border-gray-100">
+        <div class="max-w-4xl mx-auto text-center">
+            <img src="images/logo-dw.svg" alt="Footer Logo" class="h-12 mx-auto mb-12">
+            
+            <div class="flex flex-wrap justify-center gap-12 mb-16">
+                <a href="https://sugomori.jp/" target="_blank"><img src="images/sugomori-logo.webp" alt="SUGOMoRI" class="h-8 grayscale hover:grayscale-0 transition opacity-60"></a>
+                <a href="https://kona-resort.jp/" target="_blank"><img src="images/konalogo1.webp" alt="KONA RESORT" class="h-8 grayscale hover:grayscale-0 transition opacity-60"></a>
             </div>
 
-            <div class="pt-10 border-t border-white/10">
-                <p class="text-xs text-gray-500 mb-6 font-bold tracking-widest uppercase">Related Sites</p>
-                <div class="flex flex-wrap justify-center items-center gap-8 opacity-70">
-                    <a href="https://sugomori.jp/" target="_blank">
-                        <img src="images/sugomori-logo.webp" alt="SUGOMoRI" class="h-8 w-auto">
-                    </a>
-                    <a href="https://kona-resort.jp/" target="_blank">
-                        <img src="images/konalogo1.webp" alt="KONA RESORT" class="h-8 w-auto">
-                    </a>
-                </div>
-            </div>
-
-            <div class="mt-16 flex flex-col items-center">
-                <img src="images/logo-dw.svg" alt="Dog Villa Holoholo" class="h-10 w-auto mb-6 opacity-80">
-                <div class="text-xs text-gray-500 space-y-2">
-                    <p>Dog Villa Holoholo（ドッグヴィラ ホロホロ）</p>
-                    <p>〒656-1501 兵庫県淡路市尾崎６２０</p>
-                    <p class="mt-6">&copy; COURAGE Inc. All Rights Reserved.</p>
-                </div>
+            <div class="space-y-4 text-sm text-gray-500">
+                <p>Dog Villa Holoholo（ドッグヴィラ ホロホロ）</p>
+                <p>&copy; COURAGE Inc. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
-
-    <div class="sticky-cta md:hidden">
-        <a href="#booking" class="flex items-center justify-center w-full bg-accent text-white py-4 rounded-full font-bold shadow-2xl">今すぐ空室をチェック</a>
-    </div>
 
 </body>
 </html>
