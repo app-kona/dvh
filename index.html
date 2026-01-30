@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DogVilla holoholo | 淡路島・愛犬と室内でも心地いい貸切ヴィラ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Shippori+Mincho:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #4a4a4a;
+            scroll-behavior: smooth;
+        }
+        .font-mincho {
+            font-family: 'Shippori Mincho', serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4));
+        }
+        .bg-cream {
+            background-color: #fdfaf6;
+        }
+        .text-accent {
+            color: #8d745a;
+        }
+        .bg-accent {
+            background-color: #8d745a;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .sticky-cta {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 400px;
+            z-index: 50;
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Header -->
+    <header class="py-4 px-6 flex justify-between items-center border-b border-gray-100">
+        <h1 class="text-xl font-bold tracking-widest text-accent">Dog Villa holoholo</h1>
+        <a href="#booking" class="text-sm font-bold border-b-2 border-accent">空室確認</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-[85vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0">
+            <!-- 実際の画像URLに置き換えてください -->
+            <img src="https://images.unsplash.com/photo-1544436484-635c0937a092?q=80&w=2070&auto=format&fit=crop" alt="室内ダイニング" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        <div class="relative z-10 text-center text-white px-4">
+            <p class="text-lg md:text-xl mb-4 font-light tracking-widest">淡路島・西海岸 1日1組限定</p>
+            <h2 class="text-3xl md:text-5xl font-mincho font-bold leading-tight mb-6">
+                ずっと、同じ目線で笑っていよう。<br>
+                <span class="text-2xl md:text-3xl">愛犬も、子供も、家族みんなが主役。</span>
+            </h2>
+            <p class="text-sm md:text-base mb-8 leading-relaxed opacity-90">
+                ドッグランが広いだけじゃない。<br>
+                新設された「低めダイニング」が、家族の団らんを室内に連れてきた。
+            </p>
+            <a href="#booking" class="inline-block bg-white text-accent px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition duration-300">
+                空室状況を確認する
+            </a>
+        </div>
+    </section>
+
+    <!-- Empathy Section -->
+    <section class="py-20 px-6 bg-cream">
+        <div class="max-w-3xl mx-auto text-center">
+            <h3 class="text-2xl font-mincho font-bold mb-10 text-accent">
+                犬と子供の旅行、<br class="md:hidden">結局リビングでバタバタしていませんか？
+            </h3>
+            <div class="space-y-6 text-left inline-block mx-auto">
+                <div class="flex items-start">
+                    <span class="text-accent mr-3">✕</span>
+                    <p>ローテーブルだと、愛犬が食べ物を狙ってしまうので食事が落ち着かない。</p>
+                </div>
+                <div class="flex items-start">
+                    <span class="text-accent mr-3">✕</span>
+                    <p>床に荷物が散らかり、子供が転んだり愛犬が誤飲しないかヒヤヒヤする。</p>
+                </div>
+                <div class="flex items-start">
+                    <span class="text-accent mr-3">✕</span>
+                    <p>雨の日や夜は、狭いソファでスマホを見るだけで終わってしまう。</p>
+                </div>
+            </div>
+            <div class="mt-12 p-8 bg-white rounded-2xl card-shadow">
+                <p class="font-bold text-lg text-accent leading-relaxed">
+                    holoholoは、そんな「パパ・ママの心の忙しさ」を、間取りで解決しました。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Update Point: Dining Table -->
+    <section class="py-20 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/2">
+                    <span class="inline-block bg-accent text-white px-3 py-1 text-sm mb-4">NEW UPDATE</span>
+                    <h3 class="text-3xl font-mincho font-bold mb-6 leading-tight">
+                        室内に「低めのダイニング」を新設。<br>
+                        “外だけじゃない”心地よさ。
+                    </h3>
+                    <p class="mb-6 leading-relaxed">
+                        ソファ中心だった空間に、あえて「低めのダイニングテーブル」を導入しました。椅子に座って、家族が向かい合える。それだけで旅の質は変わります。
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>安心の高さ：</strong> 愛犬の顔には近く、でもテーブルには届かない。</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>ゆとりの広さ：</strong> 家族4人で地元の幸を囲める十分なスペース。</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-accent mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><strong>床の解放：</strong> 荷物を上に置けるから、足元は愛犬の遊び場に。</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <div class="aspect-square bg-gray-200 rounded-3xl overflow-hidden relative">
+                         <!--  -->
+                         <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop" alt="低めのダイニング" class="w-full h-full object-cover">
+                         <div class="absolute bottom-4 right-4 bg-white/80 backdrop-blur px-4 py-2 rounded-full text-xs font-bold">
+                             ※2024年 室内リニューアル完了
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4 Reasons Section -->
+    <section class="py-20 px-6 bg-cream">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-center text-3xl font-mincho font-bold mb-16">holoholoが選ばれる4つの理由</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Reason 1 -->
+                <div class="bg-white p-8 rounded-3xl card-shadow">
+                    <div class="text-accent text-3xl font-bold mb-4">01</div>
+                    <h4 class="text-xl font-bold mb-4">1日1組限定・完全貸切の「解放区」</h4>
+                    <p class="text-sm leading-relaxed">
+                        他の宿泊客や犬との接触を気にしなくていい。吠えても、走り回っても、ここはあなたたちだけの王国です。
+                    </p>
+                </div>
+                <!-- Reason 2 -->
+                <div class="bg-white p-8 rounded-3xl card-shadow">
+                    <div class="text-accent text-3xl font-bold mb-4">02</div>
+                    <h4 class="text-xl font-bold mb-4">約600㎡の天然芝ドッグラン</h4>
+                    <p class="text-sm leading-relaxed">
+                        淡路島の風を感じる広大な芝生。多頭飼いや元気なお子様でも、体力が尽きるまで遊び尽くせます。
+                    </p>
+                </div>
+                <!-- Reason 3 -->
+                <div class="bg-white p-8 rounded-3xl card-shadow">
+                    <div class="text-accent text-3xl font-bold mb-4">03</div>
+                    <h4 class="text-xl font-bold mb-4">リビングから外へ、シームレスな動線</h4>
+                    <p class="text-sm leading-relaxed">
+                        「外で遊ぶ犬」と「中で料理するママ」。どこにいても家族の気配を感じ、声をかけ合える一体感のある設計。
+                    </p>
+                </div>
+                <!-- Reason 4 -->
+                <div class="bg-white p-8 rounded-3xl card-shadow">
+                    <div class="text-accent text-3xl font-bold mb-4">04</div>
+                    <h4 class="text-xl font-bold mb-4">西海岸の夕日を特等席で</h4>
+                    <p class="text-sm leading-relaxed">
+                        BBQテラスから眺める夕陽は格別。夜は新設のダイニングで、星空の下の余韻を楽しんでください。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="py-20 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-center text-2xl md:text-3xl font-mincho font-bold mb-12 italic">Enjoy Your Stay</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="relative rounded-2xl overflow-hidden h-80 group">
+                    <img src="https://images.unsplash.com/photo-1596462502278-27bfad4575a6?q=80&w=1760&auto=format&fit=crop" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/30 flex items-end p-6">
+                        <div class="text-white">
+                            <p class="text-xs font-bold mb-1">雨の日でも</p>
+                            <h5 class="font-bold">家族の思い出は止まらない</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative rounded-2xl overflow-hidden h-80 group">
+                    <img src="https://images.unsplash.com/photo-1517646281553-9b9341ef0a12?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/30 flex items-end p-6">
+                        <div class="text-white">
+                            <p class="text-xs font-bold mb-1">子供が寝たあと</p>
+                            <h5 class="font-bold">夫婦だけのバータイム</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative rounded-2xl overflow-hidden h-80 group">
+                    <img src="https://images.unsplash.com/photo-1504851149312-7a075b496cc7?q=80&w=1905&auto=format&fit=crop" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/30 flex items-end p-6">
+                        <div class="text-white">
+                            <p class="text-xs font-bold mb-1">平日なら</p>
+                            <h5 class="font-bold">究極のワーケーション</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 px-6 bg-cream">
+        <div class="max-w-3xl mx-auto">
+            <h3 class="text-center text-2xl font-bold mb-12">よくある質問</h3>
+            <div class="space-y-4">
+                <div class="bg-white p-6 rounded-xl">
+                    <p class="font-bold text-accent mb-2">Q. 子どもがいても大丈夫？</p>
+                    <p class="text-sm">A. 大歓迎です！家族利用を想定した一棟貸しですので、備品等も配慮しております。お子様連れでも安心してお越しください。</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl">
+                    <p class="font-bold text-accent mb-2">Q. 雨の日でも楽しめますか？</p>
+                    <p class="text-sm">A. はい。今回のアップデートで室内食事が快適になったため、天候に左右されず「おこもりステイ」を満喫いただけます。</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl">
+                    <p class="font-bold text-accent mb-2">Q. 大型犬や多頭飼いでも平気？</p>
+                    <p class="text-sm">A. 600㎡の広大なドッグランがございますので、大型犬も余裕を持って遊んでいただけます。頭数についても柔軟に対応しますのでご相談ください。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Final CTA -->
+    <footer id="booking" class="bg-gray-900 text-white py-20 px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <h3 class="text-3xl font-mincho font-bold mb-6">愛犬の、弾けるような笑顔が見たくなったら。</h3>
+            <p class="mb-10 text-gray-400">
+                1日1組様だけの限定席。<br>
+                人気の日程はすぐに埋まってしまうため、お早めのご確認をおすすめします。
+            </p>
+            <div class="flex flex-col gap-4">
+                <a href="https://awaji-holoholo.jp/" target="_blank" class="bg-accent hover:bg-opacity-90 text-white px-8 py-5 rounded-full font-bold text-lg transition duration-300">
+                    公式サイトで空室を確認する
+                </a>
+                <a href="#" class="bg-transparent border border-white/30 hover:bg-white/10 text-white px-8 py-5 rounded-full font-bold text-lg transition duration-300">
+                    公式LINEで相談する
+                </a>
+            </div>
+            <div class="mt-20 pt-10 border-t border-white/10 text-xs text-gray-500">
+                <p>Dog Villa holoholo（ドッグヴィラ ホロホロ）</p>
+                <p class="mt-2">兵庫県淡路市（詳細は予約確定時にお伝えします）</p>
+                <p class="mt-6">&copy; Dog Villa holoholo. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="sticky-cta md:hidden">
+        <a href="#booking" class="flex items-center justify-center w-full bg-accent text-white py-4 rounded-full font-bold shadow-2xl">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+            今すぐ空室をチェック
+        </a>
+    </div>
+
+</body>
+</html>
