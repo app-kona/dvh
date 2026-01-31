@@ -29,7 +29,7 @@
         .font-italic { font-family: 'Libre Baskerville', serif; font-style: italic; }
         
         .section-padding { padding-top: 10rem; padding-bottom: 10rem; }
-        @media (max-width: 768px) { .section-padding { padding-top: 5rem; padding-bottom: 5rem; } }
+        @media (max-width: 768px) { .section-padding { padding-top: 6rem; padding-bottom: 6rem; } }
 
         .hero-gradient { background: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.45)); }
         .text-accent { color: var(--accent); }
@@ -119,14 +119,14 @@
         #main-content { display: none; opacity: 0; transition: opacity 1s ease-in-out; }
         #main-content.content-visible { display: block; opacity: 1; }
 
-        /* Mobile Sticky CTA Fix (Ensuring it shows up fully above safe area) */
+        /* Mobile Sticky CTA Fix (Ensuring visibility on devices with home indicators) */
         .sticky-cta-mobile {
             position: fixed;
             bottom: 0;
             left: 0;
             width: 100%;
-            background: linear-gradient(to top, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0) 100%);
-            padding: 1.5rem 1.5rem calc(1.5rem + env(safe-area-inset-bottom));
+            background: linear-gradient(to top, rgba(255,255,255,1) 30%, rgba(255,255,255,0) 100%);
+            padding: 1.5rem 1.5rem calc(2rem + env(safe-area-inset-bottom));
             z-index: 110;
             pointer-events: none;
         }
@@ -135,7 +135,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 60px;
+            height: 64px;
             font-size: 14px;
         }
     </style>
@@ -196,7 +196,7 @@
         <section id="concept" class="section-padding px-6 bg-soft">
             <div class="max-w-7xl mx-auto">
                 <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-24 text-left">
-                    <div class="lg:w-1/2 fade-up">
+                    <div class="lg:w-1/2 fade-up text-left">
                         <span class="font-italic text-accent text-2xl md:text-3xl mb-4 block">The Experience</span>
                         <h2 class="text-2xl md:text-4xl font-mincho font-bold leading-snug mb-8 text-gray-900">
                             犬と子供の旅行、<br class="md:hidden">結局「忙しさ」に追われていませんか？
@@ -226,14 +226,14 @@
             </div>
         </section>
 
-        <!-- Feedback Section (Google Maps Logo Update) -->
+        <!-- Feedback Section -->
         <section class="section-padding px-6 bg-white overflow-hidden">
             <div class="max-w-4xl mx-auto">
                 <div class="text-center mb-16 fade-up">
                     <a href="https://www.google.com/maps/place/Dog+Villa+Holoholo/@34.4992888,134.8598041,896m/data=!3m1!1e3!4m11!3m10!1s0x3554c950ec066349:0x121d3cd545fe9226!5m2!4m1!1i2!8m2!3d34.4992844!4d134.862379!9m1!1b1!16s%2Fg%2F11l2qxlcf0?authuser=0&entry=ttu&g_ep=EgoyMDI2MDEyOC4wIKXMDSoKLDEwMDc5MjA3MUgBUAM%3D" target="_blank" class="group block">
                         <div class="flex flex-col items-center gap-6">
                             <!-- Custom Google Map Logo -->
-                            <img src="images/gmap1.png" alt="Google Maps Review" class="h-12 w-auto transition-transform group-hover:scale-110">
+                            <img src="images/gmap1.png" alt="Google Maps Review" class="h-14 w-auto transition-transform group-hover:scale-105">
                             <h3 class="text-xl md:text-2xl font-mincho font-bold text-gray-800 tracking-wider underline decoration-accent/30 underline-offset-8 transition-colors group-hover:text-accent">お客様の声から、進化は始まりました。</h3>
                         </div>
                     </a>
@@ -258,17 +258,17 @@
         <!-- Update Section -->
         <section id="update" class="section-padding px-6 bg-white">
             <div class="max-w-7xl mx-auto text-left">
-                <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-24">
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-24 text-left">
                     <div class="lg:w-1/2 fade-up">
                         <span class="inline-block bg-accent text-white px-5 py-1 text-[9px] tracking-widest mb-6 uppercase">New Signature Interior</span>
                         <h3 class="text-3xl md:text-5xl font-mincho font-bold mb-8 leading-[1.3] tracking-tight text-gray-900">
                             「室内」こそ、<br>家族の舞台であってほしい。
                         </h3>
-                        <p class="leading-loose mb-10 text-gray-500 font-light text-base md:text-lg">
+                        <p class="leading-loose mb-10 text-gray-500 font-light text-base md:text-lg text-left">
                             ただのアップデートではなく、holoholoが目指したのは「心理的な解放」です。ローテーブルから低めのダイニングへ。このわずかな高さの変化が、愛犬家と親世代に最高のゆとりをもたらします。
                         </p>
                         <div class="space-y-8">
-                            <div class="flex gap-6 group">
+                            <div class="flex gap-6 group text-left">
                                 <div class="text-accent font-italic text-2xl opacity-40">01</div>
                                 <div>
                                     <h4 class="font-bold text-lg mb-2 tracking-wide text-gray-800 uppercase">安心をデザインする「高さ」</h4>
@@ -287,21 +287,21 @@
             </div>
         </section>
 
-        <!-- New Section: Warmth (Fireplace & Bonfire) -->
+        <!-- Flame Section (Fireplace & Bonfire) -->
         <section id="flame" class="section-padding px-6 bg-white overflow-hidden text-left">
             <div class="max-w-7xl mx-auto">
-                <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-32">
+                <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-32 text-left">
                     <div class="lg:w-1/2 fade-up order-2 lg:order-1">
                         <div class="grid grid-cols-2 gap-4 md:gap-8">
                             <div class="rounded-card overflow-hidden shadow-xl aspect-square relative group">
                                 <img src="images/gallery_img2.webp" alt="Wood Stove Interior" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-110">
                                 <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
-                                <div class="absolute bottom-6 left-6 text-white text-[10px] font-bold tracking-widest uppercase">Wood Stove</div>
+                                <div class="absolute bottom-6 left-6 text-white text-[10px] font-bold tracking-widest uppercase tracking-widest">Wood Stove</div>
                             </div>
                             <div class="rounded-card overflow-hidden shadow-xl aspect-square mt-12 md:mt-24 relative group">
                                 <img src="images/plan-bg.webp" alt="Outdoor Bonfire" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-110">
                                 <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
-                                <div class="absolute bottom-6 left-6 text-white text-[10px] font-bold tracking-widest uppercase">Fire Pit</div>
+                                <div class="absolute bottom-6 left-6 text-white text-[10px] font-bold tracking-widest uppercase tracking-widest">Fire Pit</div>
                             </div>
                         </div>
                     </div>
@@ -317,7 +317,7 @@
                         </p>
                         <div class="flex items-center gap-4 text-accent">
                             <div class="w-12 h-[1px] bg-accent"></div>
-                            <span class="text-xs font-bold tracking-[0.2em] uppercase">The Hearth of Life</span>
+                            <span class="text-xs font-bold tracking-[0.2em] uppercase tracking-widest">The Heart of Warmth</span>
                         </div>
                     </div>
                 </div>
@@ -327,7 +327,7 @@
         <!-- Cuisine Synergy -->
         <section id="dining" class="section-padding px-6 bg-soft overflow-hidden text-left">
             <div class="max-w-7xl mx-auto">
-                <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-32">
+                <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-32 text-left">
                     <div class="lg:w-5/12 fade-up">
                         <span class="font-italic text-accent text-2xl md:text-3xl mb-5 block">Cuisine</span>
                         <h3 class="text-3xl md:text-4xl font-mincho font-bold mb-8 leading-tight text-gray-900">
@@ -340,10 +340,10 @@
                     </div>
                     <div class="lg:w-7/12 grid grid-cols-2 gap-4 md:gap-8 fade-up relative">
                         <div class="rounded-card overflow-hidden shadow-xl aspect-[3/4]">
-                            <img src="images/gallery_img4.webp" alt="Grill Cooking" class="w-full h-full object-cover">
+                            <img src="images/gallery_img4.webp" alt="Outdoor Cooking" class="w-full h-full object-cover">
                         </div>
                         <div class="rounded-card overflow-hidden shadow-xl aspect-[3/4] mt-12 md:mt-24">
-                            <img src="images/gallery_img3.webp" alt="Dining Room" class="w-full h-full object-cover">
+                            <img src="images/gallery_img3.webp" alt="Indoor Dining" class="w-full h-full object-cover">
                         </div>
                     </div>
                 </div>
@@ -351,9 +351,9 @@
         </section>
 
         <!-- Amenities -->
-        <section id="features" class="relative section-padding px-6 bg-gray-900 text-white overflow-hidden text-left">
+        <section id="features" class="relative section-padding px-6 bg-gray-900 text-white overflow-hidden">
             <div class="absolute inset-0 opacity-30">
-                <img src="images/features-bg.webp" alt="Standard Background" class="w-full h-full object-cover">
+                <img src="images/features-bg.webp" alt="Resort Amenities" class="w-full h-full object-cover">
             </div>
             <div class="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-900/95 to-gray-900"></div>
             <div class="relative z-10 max-w-7xl mx-auto text-center">
@@ -361,32 +361,32 @@
                     <span class="font-italic text-accent text-3xl mb-4 block">The Value</span>
                     <h3 class="text-2xl md:text-4xl font-mincho font-bold tracking-[0.2em] uppercase">Holoholo Standard</h3>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 text-left">
                     <div class="bg-white/5 backdrop-blur-xl p-8 rounded-card border border-white/10 fade-up">
                         <div class="text-accent text-2xl font-italic mb-4">01</div>
-                        <h4 class="text-lg font-bold mb-3 tracking-wider text-left uppercase">Private</h4>
-                        <p class="text-xs leading-loose opacity-60 font-light text-left">1日1組、完全貸切。あなたたちだけのプライベートな王国。</p>
+                        <h4 class="text-lg font-bold mb-3 tracking-wider uppercase tracking-widest">Private</h4>
+                        <p class="text-xs leading-loose opacity-60 font-light">1日1組、完全貸切。あなたたちだけのプライベートな王国。</p>
                     </div>
                     <div class="bg-white/5 backdrop-blur-xl p-8 rounded-card border border-white/10 fade-up">
                         <div class="text-accent text-2xl font-italic mb-4">02</div>
-                        <h4 class="text-lg font-bold mb-3 tracking-wider text-left uppercase">Greenery</h4>
-                        <p class="text-xs leading-loose opacity-60 font-light text-left">600㎡の天然芝ドッグラン。心ゆくまで走り回れる解放感。</p>
+                        <h4 class="text-lg font-bold mb-3 tracking-wider uppercase tracking-widest">Greenery</h4>
+                        <p class="text-xs leading-loose opacity-60 font-light">600㎡の天然芝ドッグラン。心ゆくまで走り回れる解放感。</p>
                     </div>
                     <div class="bg-white/5 backdrop-blur-xl p-8 rounded-card border border-white/10 fade-up">
                         <div class="text-accent text-2xl font-italic mb-4">03</div>
-                        <h4 class="text-lg font-bold mb-3 tracking-wider text-left uppercase">Seamless</h4>
-                        <p class="text-xs leading-loose opacity-60 font-light text-left">室内と外が地続き。子供と犬の気配を常に感じ、安心して過ごせます。</p>
+                        <h4 class="text-lg font-bold mb-3 tracking-wider uppercase tracking-widest">Seamless</h4>
+                        <p class="text-xs leading-loose opacity-60 font-light">室内と外が地続き。子供と犬の気配を常に感じ、安心して過ごせます。</p>
                     </div>
                     <div class="bg-white/5 backdrop-blur-xl p-8 rounded-card border border-white/10 fade-up">
                         <div class="text-accent text-2xl font-italic mb-4">04</div>
-                        <h4 class="text-lg font-bold mb-3 tracking-wider text-left uppercase">Horizon</h4>
-                        <p class="text-xs leading-loose opacity-60 font-light text-left">西海岸の黄昏。海が黄金色に染まるマジックアワーを特等席から。</p>
+                        <h4 class="text-lg font-bold mb-3 tracking-wider uppercase tracking-widest">Horizon</h4>
+                        <p class="text-xs leading-loose opacity-60 font-light">西海岸の黄昏。海が黄金色に染まるマジックアワーを特等席から。</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Gallery -->
+        <!-- Visual Story Gallery -->
         <section id="gallery" class="section-padding px-6 bg-white text-center">
             <div class="max-w-7xl mx-auto">
                 <div class="mb-16 md:mb-24 fade-up">
@@ -394,29 +394,29 @@
                 </div>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-8">
                     <div class="col-span-2 row-span-2 rounded-card overflow-hidden shadow-lg fade-up">
-                        <img src="images/slide5.webp" alt="Story 1" class="w-full h-full object-cover hover:scale-110 transition duration-[3s]">
+                        <img src="images/slide5.webp" alt="Visual Moment" class="w-full h-full object-cover hover:scale-110 transition duration-[3s]">
                     </div>
                     <div class="rounded-card overflow-hidden shadow-sm fade-up">
-                        <img src="images/gallery_img1.webp" alt="Story 2" class="w-full h-full object-cover aspect-square hover:scale-110 transition duration-[3s]">
+                        <img src="images/gallery_img1.webp" alt="Visual Moment" class="w-full h-full object-cover aspect-square hover:scale-110 transition duration-[3s]">
                     </div>
                     <div class="rounded-card overflow-hidden shadow-sm fade-up">
-                        <img src="images/gallery_img8.webp" alt="Story 3" class="w-full h-full object-cover aspect-square hover:scale-110 transition duration-[3s]">
+                        <img src="images/gallery_img8.webp" alt="Visual Moment" class="w-full h-full object-cover aspect-square hover:scale-110 transition duration-[3s]">
                     </div>
                     <div class="rounded-card overflow-hidden shadow-sm fade-up">
-                        <img src="images/gallery_img5.webp" alt="Story 4" class="w-full h-full object-cover aspect-square hover:scale-110 transition duration-[3s]">
+                        <img src="images/gallery_img5.webp" alt="Visual Moment" class="w-full h-full object-cover aspect-square hover:scale-110 transition duration-[3s]">
                     </div>
                     <div class="rounded-card overflow-hidden shadow-sm fade-up">
-                        <img src="images/gallery_img7.webp" alt="Story 5" class="w-full h-full object-cover aspect-square hover:scale-110 transition duration-[3s]">
+                        <img src="images/gallery_img7.webp" alt="Visual Moment" class="w-full h-full object-cover aspect-square hover:scale-110 transition duration-[3s]">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Map -->
+        <!-- Map Section -->
         <section id="location" class="section-padding px-6 bg-soft text-left">
             <div class="max-w-7xl mx-auto">
                 <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-                    <div class="lg:w-1/3 fade-up text-left">
+                    <div class="lg:w-1/3 fade-up">
                         <span class="font-italic text-accent text-2xl md:text-3xl mb-4 block">Location</span>
                         <h3 class="text-2xl md:text-3xl font-mincho font-bold mb-6 tracking-wide text-gray-800">淡路島・西海岸のほとり</h3>
                         <p class="text-sm text-gray-500 leading-loose mb-10 font-light">
@@ -431,15 +431,14 @@
                     <div class="lg:w-2/3 w-full fade-up">
                         <div class="map-container shadow-2xl relative">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.386972728631!2d134.8598040761917!3d34.49928879399239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3554c950ec066349%3A0x121d3cd545fe9226!2sDog%20Villa%20Holoholo!5e1!3m2!1sja!2sjp!4v1769840640083!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Final CTA Footer -->
-        <footer id="booking" class="section-padding px-6 bg-white border-t border-gray-50 text-center pb-32 md:pb-40">
-            <div class="max-w-4xl mx-auto fade-up text-center">
+        <footer id="booking" class="section-padding px-6 bg-white border-t border-gray-50 text-center pb-40">
+            <div class="max-w-4xl mx-auto fade-up">
                 <h3 class="text-3xl md:text-5xl font-mincho font-bold mb-10 text-gray-800 leading-[1.3]">
                     愛犬の、弾けるような<br>笑顔が見たくなったら。
                 </h3>
@@ -451,20 +450,22 @@
                 </a>
 
                 <div class="mt-24 md:mt-32 pt-16 md:pt-20 border-t border-gray-50">
-                    <p class="text-[9px] tracking-[0.4em] text-gray-400 uppercase mb-10 font-bold">Partner Brands</p>
-                    <div class="flex flex-wrap justify-center items-center gap-10 md:gap-16 opacity-30 grayscale">
-                        <a href="https://sugomori.jp/" target="_blank" class="hover:grayscale-0 transition duration-500"><img src="images/sugomori-logo.webp" alt="SUGOMoRI Logo" class="h-8 md:h-10"></a>
-                        <a href="https://kona-resort.jp/" target="_blank" class="hover:grayscale-0 transition duration-500"><img src="images/konalogo1.webp" alt="KONA RESORT Logo" class="h-8 md:h-10"></a>
+                    <p class="text-[10px] tracking-[0.4em] text-gray-400 uppercase mb-12 font-bold uppercase tracking-widest">Partner Brands</p>
+                    <div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-40 grayscale hover:opacity-100 transition duration-700">
+                        <!-- SUGOMoRI Link Updated and Logo Larger -->
+                        <a href="https://sugomori.hyogo.jp/" target="_blank" class="hover:grayscale-0 transition duration-500"><img src="images/sugomori-logo.webp" alt="SUGOMoRI Logo" class="h-12 md:h-16"></a>
+                        <!-- KONA RESORT Logo Larger -->
+                        <a href="https://kona-resort.jp/" target="_blank" class="hover:grayscale-0 transition duration-500"><img src="images/konalogo1.webp" alt="KONA RESORT Logo" class="h-12 md:h-16"></a>
                     </div>
-                    <div class="mt-16 md:mt-24">
+                    <div class="mt-20">
                         <img src="images/logo7.webp" alt="Brand Logo" class="h-10 md:h-12 mx-auto mb-6 opacity-70">
-                        <p class="text-[9px] text-gray-300 font-light tracking-widest uppercase">&copy; Dog Villa Holoholo All Rights Reserved.</p>
+                        <p class="text-[9px] text-gray-300 font-light tracking-widest uppercase tracking-widest text-shadow-none">&copy; Dog Villa Holoholo All Rights Reserved.</p>
                     </div>
                 </div>
             </div>
         </footer>
 
-        <!-- Mobile Sticky CTA (Final Safe Fix) -->
+        <!-- Mobile Sticky CTA (Safe Fix) -->
         <div class="sticky-cta-mobile md:hidden">
             <a href="https://awaji-holoholo.jp/" target="_blank" class="pulse-btn w-full bg-accent text-white rounded-full font-bold shadow-2xl tracking-widest uppercase">
                 RESERVE NOW
