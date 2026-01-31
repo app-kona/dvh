@@ -1,0 +1,27 @@
+name: Deploy to Xserver via SFTP
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: SFTP Deploy
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}     # sv13217.xserver.jp
+          username: ${{ secrets.FTP_USERNAME }} # xs057242
+          password: ${{ secrets.FTP_PASSWORD }} # サーバーパネルのパスワード
+          port: 22 
+          
+          local_path: './*'
+          # ⚠️ 画像（image_04d424.png）の階層に完璧に合わせました
+          remote_path: '/home/xs057242/kona-resort.jp/public_html/lp_data/holoholo202601/'
+          
+          args: '-o StrictHostKeyChecking=no'
