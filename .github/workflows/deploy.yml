@@ -18,12 +18,12 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          # ⚠️ image_045483.png の指定通り 10022番を指定
+          # ⚠️ 重要：エックスサーバー指定の 10022 番ポート
           port: 10022 
           
           local_path: './*'
-          # ⚠️ image_04d424.png の階層に合わせた正確なフルパス
+          # ⚠️ ファイルマネージャーで確認した正確なフルパス
           remote_path: '/home/xs057242/kona-resort.jp/public_html/lp_data/holoholo202601/'
           
-          # 初回接続時のエラーを防ぐ設定
+          # 初回接続時の認証エラーを回避する設定
           args: '-o StrictHostKeyChecking=no'
