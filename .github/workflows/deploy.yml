@@ -18,7 +18,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          # ⚠️ image_045483.png で確認した 10022番を指定
+          # ⚠️ image_045483.png の指定通り 10022 に変更済み
           port: 10022 
           
           local_path: './*'
