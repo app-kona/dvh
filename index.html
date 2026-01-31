@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dog Villa Holoholo | 淡路島・愛犬と室内でも心地いい貸切ヴィラ</title>
+    <title>Dog Villa Holoholo | 広々ドッグラン付Villa、家族の語らう特等席</title>
     <meta name="description" content="淡路島・西海岸にある1日1組限定の貸切ドッグヴィラ「holoholo」。新設された低めダイニングで、愛犬や子供と一緒に室内でも最高に心地よい滞在を。">
     
-    <!-- OGP Settings for SNS -->
+    <!-- OGP Settings -->
     <meta property="og:title" content="Dog Villa Holoholo | 淡路島・室内でも心地いい愛犬同伴ヴィラ">
-    <meta property="og:description" content="ドッグランが広いだけじゃない。室内滞在価値を強化した、愛犬と家族のための淡路島貸切ステイ。">
+    <meta property="og:description" content="広々ドッグラン付Villa、家族の語らう特等席。室内滞在価値を強化した、愛犬と家族のための淡路島貸切ステイ。">
     <meta property="og:image" content="images/slide1.webp">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dog Villa Holoholo">
@@ -16,316 +16,329 @@
 
     <link rel="icon" href="images/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Shippori+Mincho:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;400;700&family=Shippori+Mincho:wght@400;700&family=Libre+Baskerville:italic@400&display=swap" rel="stylesheet">
+    
     <style>
-        body { font-family: 'Noto Sans JP', sans-serif; color: #4a4a4a; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+        :root {
+            --accent: #8d745a;
+            --bg-cream: #f9f6f2;
+            --text-main: #333333;
+        }
+        body { font-family: 'Noto Sans JP', sans-serif; color: var(--text-main); scroll-behavior: smooth; -webkit-font-smoothing: antialiased; background-color: #fff; }
         .font-mincho { font-family: 'Shippori Mincho', serif; }
-        .hero-gradient { background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.45)); }
-        .bg-cream { background-color: #fdfaf6; }
-        .text-accent { color: #8d745a; }
-        .bg-accent { background-color: #8d745a; }
-        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); }
-        .parallax-bg { background-attachment: fixed; background-position: center; background-size: cover; }
-        @media (max-width: 768px) { .parallax-bg { background-attachment: scroll; } }
+        .font-italic { font-family: 'Libre Baskerville', serif; font-style: italic; }
         
-        /* Smooth Fade In */
-        .fade-in { opacity: 0; transform: translateY(20px); transition: all 1s ease-out; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        /* 圧倒的な余白とレイアウト */
+        .section-padding { padding-top: 10rem; padding-bottom: 10rem; }
+        @media (max-width: 768px) { .section-padding { padding-top: 6rem; padding-bottom: 6rem; } }
 
-        .sticky-cta {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 90%;
-            max-width: 400px;
-            z-index: 100;
-        }
+        /* デザイン・ディテール */
+        .hero-gradient { background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.3)); }
+        .text-accent { color: var(--accent); }
+        .bg-accent { background-color: var(--accent); }
+        .bg-soft { background-color: var(--bg-cream); }
         
-        /* Pulse Animation for Booking Button */
+        /* 高級感を出す曲線 */
+        .rounded-arch { border-top-left-radius: 120px; }
+        .rounded-card { border-radius: 40px; }
+        
+        /* アニメーション */
+        .fade-up { opacity: 0; transform: translateY(40px); transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1); }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+        .image-reveal { overflow: hidden; position: relative; }
+        .image-reveal img { transform: scale(1.1); transition: transform 2s cubic-bezier(0.22, 1, 0.36, 1); }
+        .image-reveal.visible img { transform: scale(1); }
+
+        /* 浮遊するボタン */
         .pulse-btn {
-            animation: pulse 2s infinite;
+            position: relative;
+            transition: all 0.4s ease;
+            box-shadow: 0 15px 35px rgba(141, 116, 90, 0.2);
         }
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(141, 116, 90, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(141, 116, 90, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(141, 116, 90, 0); }
+        .pulse-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 45px rgba(141, 116, 90, 0.3);
         }
+
+        .text-shadow-elegant { text-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+        
+        .letter-spacing-huge { letter-spacing: 0.4em; }
+        .letter-spacing-large { letter-spacing: 0.15em; }
     </style>
 </head>
-<body class="bg-white">
+<body>
 
-    <!-- Header -->
-    <header class="py-4 px-6 flex justify-between items-center border-b border-gray-100 sticky top-0 bg-white/95 backdrop-blur z-50">
-        <a href="/">
+    <!-- Nav -->
+    <header class="fixed top-0 w-full z-[100] transition-all duration-500 py-6 px-8 flex justify-between items-center bg-white/80 backdrop-blur-md border-b border-gray-50">
+        <a href="/" class="transition hover:opacity-70">
             <img src="images/logo7.webp" alt="Dog Villa Holoholo" class="h-10 md:h-12 w-auto">
         </a>
-        <nav class="hidden md:flex gap-8 text-sm font-bold tracking-widest uppercase text-gray-600">
-            <a href="#concept" class="hover:text-accent transition">Concept</a>
-            <a href="#update" class="hover:text-accent transition">New Interior</a>
-            <a href="#features" class="hover:text-accent transition">Features</a>
+        <nav class="hidden lg:flex gap-12 text-[11px] font-bold tracking-[0.2em] uppercase text-gray-500">
+            <a href="#concept" class="hover:text-accent transition">The Concept</a>
+            <a href="#update" class="hover:text-accent transition">The Interior</a>
+            <a href="#features" class="hover:text-accent transition">Amenities</a>
             <a href="#gallery" class="hover:text-accent transition">Gallery</a>
         </nav>
-        <a href="#booking" class="bg-accent text-white px-6 py-2 rounded-full text-xs font-bold hover:bg-opacity-90 transition">Reserve</a>
+        <a href="#booking" class="bg-accent text-white px-8 py-3 rounded-full text-[10px] font-bold tracking-widest hover:bg-black transition-all">RESERVE</a>
     </header>
 
-    <!-- Hero Section -->
-    <section class="relative h-[90vh] flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0">
-            <img src="images/slide1.webp" alt="Dog Villa Holoholo View" class="w-full h-full object-cover">
+    <!-- Hero -->
+    <section class="relative h-screen flex items-center justify-center">
+        <div class="absolute inset-0 image-reveal visible">
+            <img src="images/slide1.webp" alt="Villa Exterior" class="w-full h-full object-cover">
             <div class="absolute inset-0 hero-gradient"></div>
         </div>
-        <div class="relative z-10 text-center text-white px-4">
-            <p class="text-lg md:text-2xl mb-4 font-light tracking-[0.3em] font-mincho text-shadow">淡路島・西海岸 1日1組限定</p>
-            <h2 class="text-3xl md:text-6xl font-mincho font-bold leading-tight mb-8 text-shadow">
+        <div class="relative z-10 text-center text-white px-4 fade-up visible">
+            <span class="inline-block mb-8 text-xs md:text-sm font-bold letter-spacing-huge font-mincho text-shadow-elegant">AWAJISHIMA WEST COAST</span>
+            <h1 class="text-4xl md:text-7xl font-mincho font-bold leading-[1.3] mb-12 text-shadow-elegant">
                 広々ドッグラン付Villa、<br>
-                <span class="text-xl md:text-3xl block mt-4 font-light tracking-wider">家族の語らう特等席</span>
-            </h2>
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="#booking" class="inline-block bg-white text-accent px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition duration-300 shadow-xl pulse-btn">
-                    空室状況を確認する
-                </a>
+                <span class="text-2xl md:text-4xl block mt-6 font-light letter-spacing-large">家族の語らう特等席</span>
+            </h1>
+            <a href="#booking" class="pulse-btn inline-block bg-white text-accent px-12 py-6 rounded-full font-bold text-sm tracking-widest hover:bg-gray-100">
+                空室状況を確認する
+            </a>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center">
+            <span class="text-[10px] tracking-[0.4em] text-white/60 mb-2 uppercase">Scroll</span>
+            <div class="w-[1px] h-12 bg-gradient-to-b from-white/60 to-transparent"></div>
+        </div>
+    </section>
+
+    <!-- Concept / Empathy -->
+    <section id="concept" class="section-padding px-6 bg-soft relative overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row items-center gap-20">
+                <div class="lg:w-1/2 fade-up">
+                    <span class="font-italic text-accent text-3xl mb-4 block">The Problem</span>
+                    <h2 class="text-3xl md:text-4xl font-mincho font-bold leading-tight mb-10">
+                        犬と子供の旅行、<br class="md:hidden">結局「忙しさ」に追われていませんか？
+                    </h2>
+                    <ul class="space-y-8 mb-12">
+                        <li class="flex items-center gap-6 group">
+                            <span class="w-12 h-[1px] bg-accent transition-all group-hover:w-16"></span>
+                            <p class="text-gray-500 font-light leading-relaxed italic">ローテーブルだと、愛犬が食べ物を狙ってしまい落ち着かない</p>
+                        </li>
+                        <li class="flex items-center gap-6 group">
+                            <span class="w-12 h-[1px] bg-accent transition-all group-hover:w-16"></span>
+                            <p class="text-gray-500 font-light leading-relaxed italic">床に荷物が散らかり、子供が転んだり愛犬が誤飲しないかヒヤヒヤする</p>
+                        </li>
+                        <li class="flex items-center gap-6 group">
+                            <span class="w-12 h-[1px] bg-accent transition-all group-hover:w-16"></span>
+                            <p class="text-gray-500 font-light leading-relaxed italic">雨の日や夜は、結局ソファでスマホを見るだけで終わってしまう</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lg:w-1/2 relative fade-up">
+                    <div class="rounded-arch overflow-hidden shadow-2xl">
+                        <img src="images/concept-img.webp" alt="Running Dog" class="w-full h-full object-cover">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Empathy Section -->
-    <section id="concept" class="py-24 px-6 bg-cream">
-        <div class="max-w-3xl mx-auto text-center">
-            <h3 class="text-2xl md:text-3xl font-mincho font-bold mb-10 text-accent leading-relaxed">
-                犬と子供の旅行、<br class="md:hidden">結局リビングでバタバタしていませんか？
-            </h3>
-            <div class="space-y-6 text-left inline-block mx-auto mb-12 border-b border-accent/20 pb-12">
-                <div class="flex items-start">
-                    <span class="text-accent mr-3 font-bold text-xl">✕</span>
-                    <p class="text-lg">ローテーブルだと、愛犬が食べ物を狙ってしまうので落ち着かない</p>
+    <!-- Google Maps Feedback (Integrated Story) -->
+    <section class="section-padding px-6 bg-white">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16 fade-up">
+                <img src="https://www.gstatic.com/images/branding/googlelogo/svg/google_logo.svg" alt="Google" class="h-8 mx-auto mb-6 opacity-80">
+                <h3 class="text-2xl font-mincho font-bold text-gray-800">お客様の声に、真摯に、応えたい。</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 fade-up">
+                <div class="bg-soft p-10 rounded-card border border-gray-100">
+                    <div class="flex text-accent text-sm mb-6">★★★★★</div>
+                    <p class="text-sm leading-loose text-gray-600 font-light">
+                        「ドッグランは広くて最高！ただ室内がローテーブルだったので、大型犬がいると食事の時だけ少し気を使いました。ここが改善されたら完璧です！」
+                    </p>
                 </div>
-                <div class="flex items-start">
-                    <span class="text-accent mr-3 font-bold text-xl">✕</span>
-                    <p class="text-lg">床に荷物が散らかり、子供が転んだり愛犬が誤飲しないかヒヤヒヤする</p>
-                </div>
-                <div class="flex items-start">
-                    <span class="text-accent mr-3 font-bold text-xl">✕</span>
-                    <p class="text-lg">雨の日や夜は、結局ソファでスマホを見るだけで終わってしまう</p>
+                <div class="bg-soft p-10 rounded-card border border-gray-100">
+                    <div class="flex text-accent text-sm mb-6">★★★★★</div>
+                    <p class="text-sm leading-loose text-gray-600 font-light">
+                        「子供と愛犬との旅行。室内でもう少しゆっくり座って食事ができるスペースがあれば、雨の日でももっと楽しめたかなと思います。」
+                    </p>
                 </div>
             </div>
-
-            <!-- Customer Voice Section -->
-            <div class="mt-16">
-                <div class="flex justify-center items-center gap-2 mb-6 text-gray-700">
-                    <img src="https://www.gstatic.com/images/branding/googlelogo/svg/google_logo.svg" alt="Google" class="h-6">
-                    <span class="text-xl font-bold">口コミでも多くのご要望をいただきました</span>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left mb-12">
-                    <div class="bg-white p-6 rounded-2xl card-shadow border border-gray-100 italic relative">
-                        <div class="flex text-yellow-400 mb-3 text-sm">★★★★★</div>
-                        <p class="text-sm leading-relaxed text-gray-600">「ドッグランは広くて最高！ただ室内がローテーブルだったので、大型犬がいると食事の時だけ少し気を使いました。ここが改善されたら完璧です！」</p>
-                        <div class="mt-4 text-xs text-gray-400">— Google Maps 口コミより抜粋</div>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl card-shadow border border-gray-100 italic relative">
-                        <div class="flex text-yellow-400 mb-3 text-sm">★★★★★</div>
-                        <p class="text-sm leading-relaxed text-gray-600">「子供と愛犬との旅行。室内でもう少しゆっくり座って食事ができるスペースがあれば、雨の日でももっと楽しめたかなと思います。」</p>
-                        <div class="mt-4 text-xs text-gray-400">— Google Maps 口コミより抜粋</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="p-8 bg-white rounded-2xl card-shadow border-l-8 border-accent">
-                <p class="font-bold text-xl text-accent leading-relaxed">
-                    皆様の声を大切に。holoholoは、<br class="hidden md:block">
-                    そんな「ご要望」を間取りのアップデートで形にしました。
+            <div class="text-center mt-16 fade-up">
+                <p class="font-mincho font-bold text-xl text-accent">
+                    皆様の声を大切に。holoholoは進化しました。
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Update Section: New Interior -->
-    <section id="update" class="py-24 px-6 bg-white overflow-hidden">
-        <div class="max-w-6xl mx-auto">
-            <div class="flex flex-col md:flex-row items-center gap-16">
-                <div class="md:w-1/2">
-                    <span class="inline-block bg-accent text-white px-4 py-1 text-xs tracking-widest mb-6">NEW INTERIOR</span>
-                    <h3 class="text-3xl font-mincho font-bold mb-8 leading-tight">
-                        室内に「低めのダイニング」を新設。<br>
-                        “外だけじゃない”心地よさの核心。
+    <!-- Update: Signature Interior -->
+    <section id="update" class="section-padding px-6 bg-white relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-20">
+                <div class="lg:w-1/2 fade-up">
+                    <span class="inline-block bg-accent text-white px-6 py-1 text-[10px] tracking-widest mb-8">2024 NEW UPDATE</span>
+                    <h3 class="text-4xl md:text-5xl font-mincho font-bold mb-10 leading-[1.2]">
+                        室内に「特等席」を。<br>
+                        家族の時間を深める<br>低めダイニング。
                     </h3>
-                    <p class="leading-relaxed mb-8 text-gray-600 text-lg">
-                        ソファ中心だった空間に、あえて「低めのダイニングテーブル」を導入しました。椅子に座って、家族が向かい合える。それだけで旅の質は劇的に変わります。
+                    <p class="leading-loose mb-12 text-gray-500 font-light text-lg">
+                        ただ食事をする場所ではなく、家族の視線が自然に交わる場所へ。ソファのようなくつろぎと、ダイニングの機能性を両立。愛犬も子供も同じ目線で過ごせる、新しい室内体験の始まりです。
                     </p>
-                    <div class="grid grid-cols-1 gap-6">
-                        <div class="flex gap-4">
-                            <div class="bg-cream p-3 rounded-full h-fit flex-shrink-0"><svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div>
+                    <div class="space-y-10">
+                        <div class="flex gap-6 group">
+                            <div class="text-accent font-italic text-2xl">01</div>
                             <div>
-                                <h4 class="font-bold text-lg mb-1 text-gray-800">安心の高さ</h4>
-                                <p class="text-sm text-gray-500 leading-relaxed">愛犬の目線には近く、でもテーブルの食事には届かない。目が離せない「ハラハラ」から解放されます。</p>
+                                <h4 class="font-bold text-xl mb-3">安心をデザインする高さ</h4>
+                                <p class="text-sm text-gray-400 leading-relaxed font-light">愛犬の目線には近く、でもテーブルの食事には届かない絶妙な設計。家族全員が安心してリラックスできる「高さ」を追求しました。</p>
                             </div>
                         </div>
-                        <div class="flex gap-4">
-                            <div class="bg-cream p-3 rounded-full h-fit flex-shrink-0"><svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div>
+                        <div class="flex gap-6 group">
+                            <div class="text-accent font-italic text-2xl">02</div>
                             <div>
-                                <h4 class="font-bold text-lg mb-1 text-gray-800">床の解放</h4>
-                                <p class="text-sm text-gray-500 leading-relaxed">荷物をテーブルに置けるから、床は常にフラット。愛犬と子供が安全に追いかけっこできる広さが生まります。</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <div class="bg-cream p-3 rounded-full h-fit flex-shrink-0"><svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div>
-                            <div>
-                                <h4 class="font-bold text-lg mb-1 text-gray-800">雨天の充実</h4>
-                                <p class="text-sm text-gray-500 leading-relaxed">雨の日も夜も、椅子に腰掛けてボードゲームや語らいを。室内が「ただの待機場所」から「思い出の舞台」へ。</p>
+                                <h4 class="font-bold text-xl mb-3">多目的に使える贅沢な空間</h4>
+                                <p class="text-sm text-gray-400 leading-relaxed font-light">朝食、ワーケーション、雨の日のボードゲーム。広々とした天板が、室内での過ごし方の可能性を無限に広げます。</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="md:w-1/2 relative">
-                    <img src="images/gallery_img10.webp" alt="室内空間のアップデート" class="rounded-3xl shadow-2xl z-10 relative">
-                    <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-accent opacity-10 rounded-full"></div>
-                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-4 border-white/30 w-[105%] h-[105%] rounded-3xl pointer-events-none"></div>
+                <div class="lg:w-1/2 relative fade-up">
+                    <div class="rounded-card overflow-hidden shadow-2xl relative">
+                        <img src="images/gallery_img10.webp" alt="Signature Interior" class="w-full h-full object-cover scale-105 hover:scale-100 transition duration-1000">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="relative py-32 parallax-bg" style="background-image: url('images/features-bg.webp');">
-        <div class="absolute inset-0 bg-black/55"></div>
-        <div class="relative z-10 max-w-6xl mx-auto px-6 text-white">
-            <h3 class="text-center text-3xl md:text-5xl font-mincho font-bold mb-20 tracking-wider">holoholoが選ばれる理由</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
-                <div class="bg-white/10 backdrop-blur-md p-10 rounded-3xl border border-white/20 hover:bg-white/20 transition cursor-default">
-                    <div class="text-accent text-4xl font-bold mb-6 italic font-mincho">01</div>
-                    <h4 class="text-2xl font-bold mb-4">1日1組限定・完全貸切の「解放区」</h4>
-                    <p class="leading-relaxed opacity-90 text-lg">他の宿泊客や犬との接触を気にしなくていい。吠えても、走り回っても、ここはあなたたちだけの王国です。</p>
+    <section id="features" class="relative section-padding px-6 bg-gray-900 text-white overflow-hidden">
+        <div class="absolute inset-0 opacity-40">
+            <img src="images/features-bg.webp" alt="Features Background" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-b from-gray-900/80 to-gray-900"></div>
+        <div class="relative z-10 max-w-7xl mx-auto">
+            <div class="text-center mb-24 fade-up">
+                <span class="font-italic text-accent text-3xl mb-4 block">The Value</span>
+                <h3 class="text-3xl md:text-5xl font-mincho font-bold tracking-[0.2em]">holoholoが選ばれる理由</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Reason 1 -->
+                <div class="bg-white/5 backdrop-blur-xl p-10 rounded-card border border-white/10 hover:bg-white/10 transition group fade-up">
+                    <div class="text-accent text-3xl font-italic mb-6 group-hover:scale-110 transition duration-500">01</div>
+                    <h4 class="text-xl font-bold mb-4 tracking-wider">1日1組、完全貸切</h4>
+                    <p class="text-sm leading-loose opacity-60 font-light">他者の目を気にせず、愛犬と子供が「自分らしく」過ごせる自由な王国を。</p>
                 </div>
-                <div class="bg-white/10 backdrop-blur-md p-10 rounded-3xl border border-white/20 hover:bg-white/20 transition cursor-default">
-                    <div class="text-accent text-4xl font-bold mb-6 italic font-mincho">02</div>
-                    <h4 class="text-2xl font-bold mb-4">約600㎡の天然芝ドッグラン</h4>
-                    <p class="leading-relaxed opacity-90 text-lg">淡路島の風を感じる広大な芝生。多頭飼いや元気なお子様でも、体力が尽きるまで遊び尽くせます。</p>
+                <!-- Reason 2 -->
+                <div class="bg-white/5 backdrop-blur-xl p-10 rounded-card border border-white/10 hover:bg-white/10 transition group fade-up" style="transition-delay: 0.1s;">
+                    <div class="text-accent text-3xl font-italic mb-6 group-hover:scale-110 transition duration-500">02</div>
+                    <h4 class="text-xl font-bold mb-4 tracking-wider">600㎡の天然芝</h4>
+                    <p class="text-sm leading-loose opacity-60 font-light">淡路島の風を感じながら、心ゆくまで走り、寝転べる広大なグリーンの解放感。</p>
                 </div>
-                <div class="bg-white/10 backdrop-blur-md p-10 rounded-3xl border border-white/20 hover:bg-white/20 transition cursor-default">
-                    <div class="text-accent text-4xl font-bold mb-6 italic font-mincho">03</div>
-                    <h4 class="text-2xl font-bold mb-4">リビングから外へ、シームレスな動線</h4>
-                    <p class="leading-relaxed opacity-90 text-lg">「外で遊ぶ犬」と「中で料理するパパ・ママ」。どこにいても家族の気配を感じ、声をかけ合える一体感。</p>
+                <!-- Reason 3 -->
+                <div class="bg-white/5 backdrop-blur-xl p-10 rounded-card border border-white/10 hover:bg-white/10 transition group fade-up" style="transition-delay: 0.2s;">
+                    <div class="text-accent text-3xl font-italic mb-6 group-hover:scale-110 transition duration-500">03</div>
+                    <h4 class="text-xl font-bold mb-4 tracking-wider">シームレス動線</h4>
+                    <p class="text-sm leading-loose opacity-60 font-light">リビングと庭をボーダレスに。子供と犬の気配を常に感じ、安心して料理を楽しめます。</p>
                 </div>
-                <div class="bg-white/10 backdrop-blur-md p-10 rounded-3xl border border-white/20 hover:bg-white/20 transition cursor-default">
-                    <div class="text-accent text-4xl font-bold mb-6 italic font-mincho">04</div>
-                    <h4 class="text-2xl font-bold mb-4">西海岸の夕日を特等席で</h4>
-                    <p class="leading-relaxed opacity-90 text-lg">BBQテラスから眺める夕陽は格別。夜は新設のダイニングで、満天の星空の下の余韻を楽しんで。</p>
+                <!-- Reason 4 -->
+                <div class="bg-white/5 backdrop-blur-xl p-10 rounded-card border border-white/10 hover:bg-white/10 transition group fade-up" style="transition-delay: 0.3s;">
+                    <div class="text-accent text-3xl font-italic mb-6 group-hover:scale-110 transition duration-500">04</div>
+                    <h4 class="text-xl font-bold mb-4 tracking-wider">西海岸の黄昏</h4>
+                    <p class="text-sm leading-loose opacity-60 font-light">夕刻は、世界が黄金色に染まるマジックアワー。日常の喧騒を忘れる最高の贅沢を。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Scene Selection -->
-    <section class="py-24 px-6 bg-white">
-        <div class="max-w-6xl mx-auto">
-            <h3 class="text-center text-3xl font-mincho font-bold mb-16 italic text-accent tracking-widest">Enjoy Your Moment</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] shadow-lg">
-                    <img src="images/slide5.webp" alt="Rainy Day Moment" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-                    <div class="absolute bottom-6 left-6 text-white">
-                        <p class="text-xs tracking-widest mb-2 uppercase opacity-80 font-bold">Rainy Day</p>
-                        <h5 class="text-xl font-bold">雨音を聴きながら、<br>家族の思い出は止まらない。</h5>
-                    </div>
+    <!-- Scene Gallery (Editorial Mix) -->
+    <section id="gallery" class="section-padding px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-24 fade-up">
+                <span class="font-italic text-accent text-3xl mb-4 block">Archive</span>
+                <h3 class="text-3xl font-mincho font-bold tracking-widest uppercase">Visual Story</h3>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+                <div class="md:col-span-2 md:row-span-2 rounded-card overflow-hidden shadow-lg fade-up">
+                    <img src="images/slide5.webp" alt="Rainy Day Relax" class="w-full h-full object-cover hover:scale-110 transition duration-[3s]">
                 </div>
-                <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] shadow-lg">
-                    <img src="images/slide4.webp" alt="Night Time Moment" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-                    <div class="absolute bottom-6 left-6 text-white">
-                        <p class="text-xs tracking-widest mb-2 uppercase opacity-80 font-bold">Night Time</p>
-                        <h5 class="text-xl font-bold">子供が寝たあと、<br>夫婦だけで淡路島の酒を愉しむ。</h5>
-                    </div>
+                <div class="rounded-card overflow-hidden shadow-lg fade-up" style="transition-delay: 0.1s;">
+                    <img src="images/gallery_img1.webp" alt="Bedroom" class="w-full h-full object-cover aspect-square hover:scale-110 transition duration-[3s]">
                 </div>
-                <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] shadow-lg">
-                    <img src="images/around-bg.webp" alt="Sunset Run Moment" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-                    <div class="absolute bottom-6 left-6 text-white">
-                        <p class="text-xs tracking-widest mb-2 uppercase opacity-80 font-bold">Sunset Run</p>
-                        <h5 class="text-xl font-bold">夕日に染まるドッグラン。<br>愛犬の笑顔が溢れる瞬間。</h5>
-                    </div>
+                <div class="rounded-card overflow-hidden shadow-lg fade-up" style="transition-delay: 0.2s;">
+                    <img src="images/gallery_img2.webp" alt="Living" class="w-full h-full object-cover aspect-square hover:scale-110 transition duration-[3s]">
+                </div>
+                <div class="rounded-card overflow-hidden shadow-lg fade-up" style="transition-delay: 0.3s;">
+                    <img src="images/gallery_img5.webp" alt="Dog Run" class="w-full h-full object-cover aspect-square hover:scale-110 transition duration-[3s]">
+                </div>
+                <div class="rounded-card overflow-hidden shadow-lg fade-up" style="transition-delay: 0.4s;">
+                    <img src="images/gallery_img7.webp" alt="Happy Dogs" class="w-full h-full object-cover aspect-square hover:scale-110 transition duration-[3s]">
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Gallery -->
-    <section id="gallery" class="py-24 px-6 bg-cream">
-        <div class="max-w-6xl mx-auto text-center">
-            <h3 class="text-3xl font-mincho font-bold mb-16">Gallery</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <img src="images/gallery_img1.webp" alt="Gallery Bedroom" class="rounded-xl aspect-square object-cover shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-300">
-                <img src="images/gallery_img2.webp" alt="Gallery Living" class="rounded-xl aspect-square object-cover shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-300">
-                <img src="images/gallery_img3.webp" alt="Gallery Dining" class="rounded-xl aspect-square object-cover shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-300">
-                <img src="images/gallery_img4.webp" alt="Gallery Exterior" class="rounded-xl aspect-square object-cover shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-300">
-                <img src="images/gallery_img5.webp" alt="Gallery Dog Run" class="rounded-xl aspect-square object-cover shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-300">
-                <img src="images/gallery_img6.webp" alt="Gallery Indoor Relax" class="rounded-xl aspect-square object-cover shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-300">
-                <img src="images/gallery_img7.webp" alt="Gallery Dogs" class="rounded-xl aspect-square object-cover shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-300">
-                <img src="images/gallery_img11.webp" alt="Gallery Entrance" class="rounded-xl aspect-square object-cover shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-300">
+            <div class="text-center mt-20 fade-up">
+                <a href="#booking" class="text-accent border-b border-accent pb-2 text-xs font-bold tracking-widest hover:text-black hover:border-black transition">VIEW MORE PHOTOS</a>
             </div>
-            <p class="mt-12 text-gray-400 text-sm italic">※写真は一部イメージを含みます。実際の滞在を想像してお楽しみください。</p>
         </div>
     </section>
 
     <!-- Access -->
-    <section class="relative py-32 bg-gray-900 text-white overflow-hidden">
-        <img src="images/access-bg.webp" alt="Access Map Background" class="absolute inset-0 w-full h-full object-cover opacity-20">
-        <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
-            <h3 class="text-3xl font-mincho font-bold mb-8">Access</h3>
-            <p class="text-xl mb-4 font-bold tracking-widest">〒656-1501 兵庫県淡路市尾崎６２０</p>
-            <p class="text-sm opacity-80 mb-12">神戸淡路鳴門自動車道 北淡ICをおりて南へ約10分。</p>
-            <div class="aspect-video bg-white/5 rounded-3xl backdrop-blur-md flex items-center justify-center border border-white/10 shadow-2xl overflow-hidden relative group">
-                <div class="text-center z-10">
-                    <p class="mb-6 text-gray-300">お車でお越しの方へ</p>
-                    <a href="https://maps.app.goo.gl/rfppd6Nkzr9Nu4EDA" target="_blank" class="bg-white text-gray-900 px-10 py-4 rounded-full font-bold hover:bg-accent hover:text-white transition duration-300 inline-flex items-center">
-                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
-                        Google Mapsで経路を見る
+    <section class="relative section-padding px-6 bg-gray-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row items-stretch gap-0 bg-white shadow-2xl rounded-card overflow-hidden fade-up">
+                <div class="lg:w-1/2 relative min-h-[400px]">
+                    <img src="images/access-bg.webp" alt="Access Background" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-accent/20"></div>
+                </div>
+                <div class="lg:w-1/2 p-12 md:p-20 flex flex-col justify-center">
+                    <span class="font-italic text-accent text-3xl mb-4 block">Access</span>
+                    <h3 class="text-2xl font-bold mb-8 tracking-widest">淡路島・尾崎</h3>
+                    <p class="text-sm text-gray-400 leading-loose mb-10 font-light">
+                        〒656-1501 兵庫県淡路市尾崎６２０<br>
+                        神戸淡路鳴門自動車道 北淡ICをおりて南へ約10分。<br>
+                        美しい海岸線を眺めながらのドライブをお楽しみください。
+                    </p>
+                    <a href="https://maps.app.goo.gl/rfppd6Nkzr9Nu4EDA" target="_blank" class="pulse-btn inline-block bg-accent text-white px-10 py-5 rounded-full font-bold text-center text-xs tracking-widest">
+                        OPEN GOOGLE MAPS
                     </a>
                 </div>
-                <div class="absolute inset-0 bg-accent/10 opacity-0 group-hover:opacity-100 transition duration-500"></div>
             </div>
         </div>
     </section>
 
     <!-- Final CTA -->
-    <footer id="booking" class="bg-white py-24 px-6 border-t border-gray-100">
-        <div class="max-w-4xl mx-auto text-center">
-            <h3 class="text-3xl md:text-4xl font-mincho font-bold mb-8 text-gray-800 leading-tight">愛犬の、弾けるような笑顔が見たくなったら。</h3>
-            <p class="mb-12 text-gray-500 leading-relaxed max-w-2xl mx-auto text-lg">
-                1日1組様だけの限定席。今回のアップデートで室内まで心地よくなったholoholoで、あなたと愛犬の新しい物語を始めませんか。
+    <footer id="booking" class="section-padding px-6 bg-white border-t border-gray-100">
+        <div class="max-w-4xl mx-auto text-center fade-up">
+            <h3 class="text-3xl md:text-5xl font-mincho font-bold mb-12 text-gray-800 leading-[1.3]">
+                愛犬の、弾けるような<br>笑顔が見たくなったら。
+            </h3>
+            <p class="mb-16 text-gray-500 leading-loose text-lg font-light">
+                1日1組様だけの限定席。室内外どこにいても、<br class="hidden md:block">
+                家族全員が「同じ景色」を楽しめる空間をご用意してお待ちしております。
             </p>
             
-            <div class="flex flex-col md:flex-row gap-6 justify-center mb-20">
-                <a href="https://awaji-holoholo.jp/" target="_blank" class="bg-accent text-white px-12 py-5 rounded-full font-bold text-xl hover:bg-opacity-90 transition shadow-lg pulse-btn">
-                    空室状況を確認・予約する
-                </a>
-            </div>
+            <a href="https://awaji-holoholo.jp/" target="_blank" class="pulse-btn inline-block bg-accent text-white px-20 py-8 rounded-full font-bold text-xl hover:bg-black transition-all">
+                空室状況を確認・予約する
+            </a>
 
-            <div class="mb-16">
-                <p class="text-xs tracking-[0.3em] text-gray-400 uppercase mb-8 font-bold">Partner Brands</p>
-                <div class="flex flex-wrap justify-center items-center gap-12 opacity-50 grayscale hover:grayscale-0 transition duration-500">
-                    <a href="https://sugomori.jp/" target="_blank" class="hover:opacity-100 transition"><img src="images/sugomori-logo.webp" alt="SUGOMoRI Logo" class="h-8 md:h-10"></a>
-                    <a href="https://kona-resort.jp/" target="_blank" class="hover:opacity-100 transition"><img src="images/konalogo1.webp" alt="KONA RESORT Logo" class="h-8 md:h-10"></a>
+            <div class="mt-32 pt-20 border-t border-gray-50">
+                <p class="text-[10px] tracking-[0.4em] text-gray-400 uppercase mb-12">Collaborative Journey</p>
+                <div class="flex flex-wrap justify-center items-center gap-16 opacity-40 grayscale">
+                    <a href="https://sugomori.jp/" target="_blank" class="hover:grayscale-0 transition duration-500"><img src="images/sugomori-logo.webp" alt="SUGOMoRI" class="h-10"></a>
+                    <a href="https://kona-resort.jp/" target="_blank" class="hover:grayscale-0 transition duration-500"><img src="images/konalogo1.webp" alt="KONA RESORT" class="h-10"></a>
                 </div>
-            </div>
-
-            <div class="pt-10 border-t border-gray-100">
-                <img src="images/logo7.webp" alt="Footer Logo" class="h-12 mx-auto mb-8 opacity-80">
-                <p class="text-xs text-gray-400 font-light tracking-widest">&copy; COURAGE Inc. All Rights Reserved.</p>
+                <div class="mt-20">
+                    <img src="images/logo7.webp" alt="Logo" class="h-12 mx-auto mb-8 opacity-90">
+                    <p class="text-[10px] text-gray-300 font-light tracking-widest uppercase">&copy; Dog Villa Holoholo All Rights Reserved.</p>
+                </div>
             </div>
         </div>
     </footer>
 
     <!-- Mobile Sticky CTA -->
-    <div class="sticky-cta md:hidden shadow-[0_-10px_40px_rgba(0,0,0,0.15)]">
-        <a href="https://awaji-holoholo.jp/" target="_blank" class="flex items-center justify-center w-full bg-accent text-white py-5 rounded-full font-bold text-lg pulse-btn">
-            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-            今すぐ空室をチェック
+    <div class="fixed bottom-8 left-1/2 -translate-x-1/2 w-[90%] md:hidden z-[110] fade-up visible">
+        <a href="https://awaji-holoholo.jp/" target="_blank" class="pulse-btn flex items-center justify-center w-full bg-accent text-white py-5 rounded-full font-bold shadow-2xl text-sm tracking-widest">
+            RESERVE NOW
         </a>
     </div>
 
     <script>
-        // Reveal animation on scroll
-        const observerOptions = { threshold: 0.15 };
+        // Intersection Observer for Reveal
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -334,15 +347,20 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('section, footer').forEach(el => {
-            el.classList.add('fade-in');
+        document.querySelectorAll('.fade-up, .image-reveal').forEach(el => {
             observer.observe(el);
         });
 
-        // Show Hero Section immediately on load
-        window.addEventListener('load', () => {
-            const hero = document.querySelector('section');
-            if(hero) hero.classList.add('visible');
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-xl', 'py-4');
+                header.classList.remove('py-6');
+            } else {
+                header.classList.remove('shadow-xl', 'py-4');
+                header.classList.add('py-6');
+            }
         });
     </script>
 </body>
