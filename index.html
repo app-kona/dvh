@@ -407,15 +407,15 @@
                 <p class="mb-14 text-gray-500 leading-loose text-base md:text-lg font-light text-shadow-none">
                     1日1組様だけの限定席。室内外どこにいても、家族全員が「同じ景色」を楽しめる空間をご用意してお待ちしております。
                 </p>
-                <a href="https://awaji-holoholo.jp/" target="_blank" class="pulse-btn inline-block bg-accent text-white px-12 md:px-20 py-7 md:py-8 rounded-full font-bold text-lg md:text-xl hover:bg-black transition-all shadow-xl">
+                <a href="https://awaji-holoholo.jp/" target="_blank" class="pulse-btn inline-block bg-accent text-white px-12 md:px-20 py-7 md:py-8 rounded-full font-bold text-lg md:text-xl hover:bg-black transition-all shadow-xl text-shadow-none">
                     空室状況を確認・予約する
                 </a>
 
                 <div class="mt-24 md:mt-32 pt-16 md:pt-20 border-t border-gray-50">
                     <p class="text-[9px] tracking-[0.4em] text-gray-400 uppercase mb-10 font-bold text-shadow-none">Collaborative Journey</p>
                     <div class="flex flex-wrap justify-center items-center gap-10 md:gap-16 opacity-30 grayscale">
-                        <a href="https://sugomori.jp/" target="_blank" class="hover:grayscale-0 transition duration-500"><img src="images/sugomori-logo.webp" alt="SUGOMoRI" class="h-8 md:h-10"></a>
-                        <a href="https://kona-resort.jp/" target="_blank" class="hover:grayscale-0 transition duration-500"><img src="images/konalogo1.webp" alt="KONA RESORT" class="h-8 md:h-10"></a>
+                        <a href="https://sugomori.jp/" target="_blank" class="hover:grayscale-0 transition duration-500 text-shadow-none"><img src="images/sugomori-logo.webp" alt="SUGOMoRI" class="h-8 md:h-10"></a>
+                        <a href="https://kona-resort.jp/" target="_blank" class="hover:grayscale-0 transition duration-500 text-shadow-none"><img src="images/konalogo1.webp" alt="KONA RESORT" class="h-8 md:h-10"></a>
                     </div>
                     <div class="mt-16 md:mt-24">
                         <img src="images/logo7.webp" alt="Logo" class="h-10 md:h-12 mx-auto mb-6 opacity-70 text-shadow-none">
@@ -427,14 +427,14 @@
 
         <!-- Mobile Sticky CTA -->
         <div class="fixed bottom-0 left-0 w-full px-5 safe-bottom-cta md:hidden z-[110] pointer-events-none">
-            <a href="https://awaji-holoholo.jp/" target="_blank" class="pulse-btn flex items-center justify-center w-full bg-accent text-white h-16 rounded-full font-bold shadow-2xl text-sm tracking-widest pointer-events-auto uppercase">
+            <a href="https://awaji-holoholo.jp/" target="_blank" class="pulse-btn flex items-center justify-center w-full bg-accent text-white h-16 rounded-full font-bold shadow-2xl text-sm tracking-widest pointer-events-auto uppercase text-shadow-none">
                 RESERVE NOW
             </a>
         </div>
     </div>
 
     <script>
-        const CORRECT_PASSWORD = "202501";
+        const CORRECT_PASSWORD = "202601";
 
         // Handle password check
         function checkPassword() {
@@ -492,10 +492,10 @@
         // Header Scroll Effect
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
-            if (window.scrollY > 30) {
+            if (header && window.scrollY > 30) {
                 header.classList.add('shadow-lg', 'py-4');
                 header.classList.remove('py-5');
-            } else {
+            } else if (header) {
                 header.classList.remove('shadow-lg', 'py-4');
                 header.classList.add('py-5');
             }
