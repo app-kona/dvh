@@ -1,4 +1,4 @@
-name: Deploy to Xserver via SFTP
+name: Deploy to Xserver via SSH Key
 
 on:
   push:
@@ -15,15 +15,16 @@ jobs:
       - name: SFTP Deploy
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
+          # image_FireShot Capture 019 で確認した情報
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          # ⚠️ 重要：エックスサーバー指定の 10022 番ポート
+          # ⚠️ さっき登録した秘密鍵を使います
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          # ⚠️ エックスサーバー指定のポート番号
           port: 10022 
           
           local_path: './*'
-          # ⚠️ ファイルマネージャーで確認した正確なフルパス
+          # ⚠️ ファイルマネージャーで確認した正確なパス
           remote_path: '/home/xs057242/kona-resort.jp/public_html/lp_data/holoholo202601/'
           
-          # 初回接続時の認証エラーを回避する設定
           args: '-o StrictHostKeyChecking=no'
