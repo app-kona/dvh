@@ -65,6 +65,10 @@
         
         .letter-spacing-huge { letter-spacing: 0.4em; }
         .letter-spacing-large { letter-spacing: 0.15em; }
+
+        /* Map styling */
+        .map-container { filter: grayscale(0.2) contrast(1.1); transition: filter 0.5s ease; border-radius: 40px; overflow: hidden; }
+        .map-container:hover { filter: grayscale(0); }
     </style>
 </head>
 <body>
@@ -147,13 +151,13 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10 fade-up">
                 <div class="bg-soft p-10 rounded-card border border-gray-100">
-                    <div class="flex text-accent text-sm mb-6">★★★★★</div>
+                    <div class="flex text-accent text-sm mb-6 font-bold">★★★★★</div>
                     <p class="text-sm leading-loose text-gray-600 font-light">
                         「ドッグランは広くて最高！ただ室内がローテーブルだったので、大型犬がいると食事の時だけ少し気を使いました。ここが改善されたら完璧です！」
                     </p>
                 </div>
                 <div class="bg-soft p-10 rounded-card border border-gray-100">
-                    <div class="flex text-accent text-sm mb-6">★★★★★</div>
+                    <div class="flex text-accent text-sm mb-6 font-bold">★★★★★</div>
                     <p class="text-sm leading-loose text-gray-600 font-light">
                         「子供と愛犬との旅行。室内でもう少しゆっくり座って食事ができるスペースがあれば、雨の日でももっと楽しめたかなと思います。」
                     </p>
@@ -246,7 +250,7 @@
         </div>
     </section>
 
-    <!-- Scene Gallery (Editorial Mix) -->
+    <!-- Visual Story Gallery -->
     <section id="gallery" class="section-padding px-6 bg-white">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-24 fade-up">
@@ -270,31 +274,30 @@
                     <img src="images/gallery_img7.webp" alt="Happy Dogs" class="w-full h-full object-cover aspect-square hover:scale-110 transition duration-[3s]">
                 </div>
             </div>
-            <div class="text-center mt-20 fade-up">
-                <a href="#booking" class="text-accent border-b border-accent pb-2 text-xs font-bold tracking-widest hover:text-black hover:border-black transition">VIEW MORE PHOTOS</a>
-            </div>
         </div>
     </section>
 
-    <!-- Access -->
-    <section class="relative section-padding px-6 bg-gray-50 overflow-hidden">
+    <!-- Map Section -->
+    <section id="location" class="section-padding px-6 bg-soft">
         <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col lg:flex-row items-stretch gap-0 bg-white shadow-2xl rounded-card overflow-hidden fade-up">
-                <div class="lg:w-1/2 relative min-h-[400px]">
-                    <img src="images/access-bg.webp" alt="Access Background" class="absolute inset-0 w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-accent/20"></div>
-                </div>
-                <div class="lg:w-1/2 p-12 md:p-20 flex flex-col justify-center">
-                    <span class="font-italic text-accent text-3xl mb-4 block">Access</span>
-                    <h3 class="text-2xl font-bold mb-8 tracking-widest">淡路島・尾崎</h3>
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/3 fade-up">
+                    <span class="font-italic text-accent text-3xl mb-4 block">Location</span>
+                    <h3 class="text-3xl font-mincho font-bold mb-8">淡路島・西海岸のほとり</h3>
                     <p class="text-sm text-gray-400 leading-loose mb-10 font-light">
                         〒656-1501 兵庫県淡路市尾崎６２０<br>
                         神戸淡路鳴門自動車道 北淡ICをおりて南へ約10分。<br>
-                        美しい海岸線を眺めながらのドライブをお楽しみください。
+                        美しい海岸線を眺めながら、愛犬とのドライブをお楽しみください。
                     </p>
-                    <a href="https://maps.app.goo.gl/rfppd6Nkzr9Nu4EDA" target="_blank" class="pulse-btn inline-block bg-accent text-white px-10 py-5 rounded-full font-bold text-center text-xs tracking-widest">
-                        OPEN GOOGLE MAPS
+                    <a href="https://maps.app.goo.gl/rfppd6Nkzr9Nu4EDA" target="_blank" class="inline-flex items-center gap-2 text-accent border-b border-accent pb-1 text-xs font-bold tracking-widest hover:text-black hover:border-black transition">
+                        GOOGLE MAPで見る
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                     </a>
+                </div>
+                <div class="lg:w-2/3 w-full fade-up">
+                    <div class="map-container shadow-2xl h-[450px]">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.386972728631!2d134.8598040761917!3d34.49928879399239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3554c950ec066349%3A0x121d3cd545fe9226!2sDog%20Villa%20Holoholo!5e1!3m2!1sja!2sjp!4v1769840640083!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
