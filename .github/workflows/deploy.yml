@@ -15,16 +15,16 @@ jobs:
       - name: SFTP Deploy
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          # image_FireShot Capture 019 の情報
+          # image_FireShot Capture 019 で確認したホストとユーザー
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
-          # ⚠️ パスワードではなく登録した秘密鍵を指定
+          # ⚠️ 重要：秘密鍵を使用する設定に変更
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-          # ⚠️ image_045483.png で確認したポート
+          # ⚠️ エックスサーバー指定の 10022 番ポート
           port: 10022 
           
           local_path: './*'
-          # ⚠️ image_04d424.png で確認したパス
+          # ⚠️ ファイルマネージャーで確認した kona-resort.jp のフルパス
           remote_path: '/home/xs057242/kona-resort.jp/public_html/lp_data/holoholo202601/'
           
           args: '-o StrictHostKeyChecking=no'
