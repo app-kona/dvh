@@ -119,6 +119,22 @@
         #main-content { display: none; opacity: 0; transition: opacity 1s ease-in-out; }
         #main-content.content-visible { display: block; opacity: 1; }
 
+        /* Instagram Tile Hover */
+        .insta-tile { position: relative; overflow: hidden; }
+        .insta-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .insta-tile:hover .insta-overlay { opacity: 1; }
+        .insta-tile img { transition: transform 0.6s ease; }
+        .insta-tile:hover img { transform: scale(1.08); }
+
         /* Mobile Sticky CTA */
         .sticky-cta-mobile {
             position: fixed;
@@ -197,22 +213,22 @@
             <div class="max-w-7xl mx-auto">
                 <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-24 text-left">
                     <div class="lg:w-1/2 fade-up">
-                        <span class="font-italic text-accent text-2xl md:text-3xl mb-4 block text-shadow-none">The Experience</span>
-                        <h2 class="text-2xl md:text-4xl font-mincho font-bold leading-snug mb-8 text-shadow-none text-gray-900">
+                        <span class="font-italic text-accent text-2xl md:text-3xl mb-4 block">The Experience</span>
+                        <h2 class="text-2xl md:text-4xl font-mincho font-bold leading-snug mb-8 text-gray-900">
                             犬と子供の旅行、<br class="md:hidden">結局「忙しさ」に追われていませんか？
                         </h2>
                         <div class="space-y-6 md:space-y-8 mb-10">
                             <div class="flex items-start gap-5 group">
                                 <span class="w-10 h-[1px] bg-accent mt-3 shrink-0 transition-all group-hover:w-16"></span>
-                                <p class="text-gray-500 font-light leading-relaxed italic text-sm md:text-base text-shadow-none">ローテーブルだと、愛犬が食べ物を狙ってしまい落ち着かない</p>
+                                <p class="text-gray-500 font-light leading-relaxed italic text-sm md:text-base">ローテーブルだと、愛犬が食べ物を狙ってしまい落ち着かない</p>
                             </div>
                             <div class="flex items-start gap-5 group">
                                 <span class="w-10 h-[1px] bg-accent mt-3 shrink-0 transition-all group-hover:w-16"></span>
-                                <p class="text-gray-500 font-light leading-relaxed italic text-sm md:text-base text-shadow-none">荷物が床に散らかり、子供の転倒や愛犬の誤飲がヒヤヒヤする</p>
+                                <p class="text-gray-500 font-light leading-relaxed italic text-sm md:text-base">荷物が床に散らかり、子供の転倒や愛犬の誤飲がヒヤヒヤする</p>
                             </div>
                             <div class="flex items-start gap-5 group">
                                 <span class="w-10 h-[1px] bg-accent mt-3 shrink-0 transition-all group-hover:w-16"></span>
-                                <p class="text-gray-500 font-light leading-relaxed italic text-sm md:text-base text-shadow-none">雨の日や夜は、結局ソファでスマホを見るだけで終わってしまう</p>
+                                <p class="text-gray-500 font-light leading-relaxed italic text-sm md:text-base">雨の日や夜は、結局ソファでスマホを見るだけで終わってしまう</p>
                             </div>
                         </div>
                     </div>
@@ -226,7 +242,7 @@
             </div>
         </section>
 
-        <!-- Feedback Section (Google Maps Reviews) -->
+        <!-- Feedback Section (gmap1.png integrated) -->
         <section class="section-padding px-6 bg-white overflow-hidden">
             <div class="max-w-4xl mx-auto">
                 <div class="text-center mb-16 fade-up">
@@ -259,18 +275,18 @@
             <div class="max-w-7xl mx-auto text-left">
                 <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-24">
                     <div class="lg:w-1/2 fade-up">
-                        <span class="inline-block bg-accent text-white px-5 py-1 text-[9px] tracking-widest mb-6 uppercase">New Signature Interior</span>
-                        <h3 class="text-3xl md:text-5xl font-mincho font-bold mb-8 leading-[1.3] tracking-tight text-gray-900">
+                        <span class="inline-block bg-accent text-white px-5 py-1 text-[9px] tracking-widest mb-6 uppercase tracking-widest">New Signature Interior</span>
+                        <h3 class="text-3xl md:text-5xl font-mincho font-bold mb-8 leading-[1.3] tracking-tight text-gray-900 text-left">
                             「室内」こそ、<br>家族の舞台であってほしい。
                         </h3>
-                        <p class="leading-loose mb-10 text-gray-500 font-light text-base md:text-lg">
+                        <p class="leading-loose mb-10 text-gray-500 font-light text-base md:text-lg text-left">
                             ただのアップデートではなく、holoholoが目指したのは「心理的な解放」です。ローテーブルから低めのダイニングへ。このわずかな高さの変化が、愛犬家と親世代に最高のゆとりをもたらします。
                         </p>
                         <div class="space-y-8">
                             <div class="flex gap-6 group text-left">
                                 <div class="text-accent font-italic text-2xl opacity-40">01</div>
                                 <div>
-                                    <h4 class="font-bold text-lg mb-2 tracking-wide text-gray-800 uppercase">安心をデザインする「高さ」</h4>
+                                    <h4 class="font-bold text-lg mb-2 tracking-wide text-gray-800 uppercase tracking-widest">安心をデザインする「高さ」</h4>
                                     <p class="text-xs md:text-sm text-gray-400 leading-relaxed font-light">愛犬の目線には近く、でもテーブルの食事には届かない絶妙な設計。家族全員が安心して同じ景色を共有できます。</p>
                                 </div>
                             </div>
@@ -363,22 +379,22 @@
                     <div class="bg-white/5 backdrop-blur-xl p-8 rounded-card border border-white/10 fade-up text-left">
                         <div class="text-accent text-2xl font-italic mb-4">01</div>
                         <h4 class="text-lg font-bold mb-3 tracking-wider uppercase tracking-widest text-shadow-none">Private</h4>
-                        <p class="text-xs leading-loose opacity-60 font-light">1日1組、完全貸切。あなたたちだけのプライベートな王国。</p>
+                        <p class="text-xs leading-loose opacity-60 font-light text-left text-shadow-none">1日1組、完全貸切。あなたたちだけのプライベートな王国。</p>
                     </div>
                     <div class="bg-white/5 backdrop-blur-xl p-8 rounded-card border border-white/10 fade-up text-left">
                         <div class="text-accent text-2xl font-italic mb-4">02</div>
                         <h4 class="text-lg font-bold mb-3 tracking-wider uppercase tracking-widest text-shadow-none">Greenery</h4>
-                        <p class="text-xs leading-loose opacity-60 font-light">600㎡の天然芝ドッグラン。心ゆくまで走り回れる解放感。</p>
+                        <p class="text-xs leading-loose opacity-60 font-light text-left text-shadow-none">600㎡の天然芝ドッグラン。心ゆくまで走り回れる解放感。</p>
                     </div>
                     <div class="bg-white/5 backdrop-blur-xl p-8 rounded-card border border-white/10 fade-up text-left">
                         <div class="text-accent text-2xl font-italic mb-4">03</div>
                         <h4 class="text-lg font-bold mb-3 tracking-wider uppercase tracking-widest text-shadow-none">Seamless</h4>
-                        <p class="text-xs leading-loose opacity-60 font-light">室内と外が地続き。子供と犬の気配を常に感じ、安心して過ごせます。</p>
+                        <p class="text-xs leading-loose opacity-60 font-light text-left text-shadow-none">室内と外が地続き。子供と犬の気配を常に感じ、安心して過ごせます。</p>
                     </div>
                     <div class="bg-white/5 backdrop-blur-xl p-8 rounded-card border border-white/10 fade-up text-left">
                         <div class="text-accent text-2xl font-italic mb-4">04</div>
                         <h4 class="text-lg font-bold mb-3 tracking-wider uppercase tracking-widest text-shadow-none">Horizon</h4>
-                        <p class="text-xs leading-loose opacity-60 font-light">西海岸の黄昏。海が黄金色に染まるマジックアワーを特等席から。</p>
+                        <p class="text-xs leading-loose opacity-60 font-light text-left text-shadow-none">西海岸の黄昏。海が黄金色に染まるマジックアワーを特等席から。</p>
                     </div>
                 </div>
             </div>
@@ -390,7 +406,7 @@
                 <div class="mb-16 md:mb-24 fade-up">
                     <h3 class="text-2xl md:text-3xl font-mincho font-bold tracking-widest uppercase text-gray-800 text-shadow-none">Visual Story</h3>
                 </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-8 text-shadow-none">
                     <div class="col-span-2 row-span-2 rounded-card overflow-hidden shadow-lg fade-up relative group">
                         <img src="images/slide5.webp" alt="Story Moment" class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-110">
                     </div>
@@ -410,31 +426,59 @@
             </div>
         </section>
 
-        <!-- Instagram Highlights -->
+        <!-- Instagram Tile Grid (New) -->
         <section id="instagram" class="section-padding px-6 bg-soft text-center">
-            <div class="max-w-7xl mx-auto fade-up">
-                <div class="mb-12">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-12 fade-up">
                     <a href="https://www.instagram.com/awaji_holoholo/" target="_blank" class="inline-flex flex-col items-center group">
                         <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg mb-6 group-hover:scale-110 transition-transform">
                             <svg class="w-8 h-8 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                         </div>
                         <span class="font-italic text-accent text-2xl md:text-3xl mb-3 block text-shadow-none">Instagram</span>
                         <h3 class="text-xl md:text-2xl font-mincho font-bold text-gray-800 tracking-widest mb-4">holoholoの「今」を届ける。</h3>
-                        <p class="text-sm text-gray-400 font-light tracking-widest">@awaji_holoholo</p>
+                        <p class="text-sm text-gray-400 font-light tracking-widest mb-10">@awaji_holoholo</p>
                     </a>
                 </div>
-                <!-- Call to Action Button for IG -->
-                <a href="https://www.instagram.com/awaji_holoholo/" target="_blank" class="inline-block border border-accent text-accent px-10 py-4 rounded-full font-bold text-xs tracking-[0.2em] hover:bg-accent hover:text-white transition-all uppercase">
+
+                <!-- 6 Tile Instagram Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-1 md:gap-4 max-w-5xl mx-auto fade-up text-shadow-none">
+                    <a href="https://www.instagram.com/awaji_holoholo/" target="_blank" class="insta-tile rounded-lg md:rounded-2xl">
+                        <img src="images/slide2.webp" alt="Instagram Post 1" class="w-full h-full object-cover">
+                        <div class="insta-overlay"><svg class="w-8 h-8 text-white opacity-80" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path></svg></div>
+                    </a>
+                    <a href="https://www.instagram.com/awaji_holoholo/" target="_blank" class="insta-tile rounded-lg md:rounded-2xl">
+                        <img src="images/slide3.webp" alt="Instagram Post 2" class="w-full h-full object-cover">
+                        <div class="insta-overlay"><svg class="w-8 h-8 text-white opacity-80" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path></svg></div>
+                    </a>
+                    <a href="https://www.instagram.com/awaji_holoholo/" target="_blank" class="insta-tile rounded-lg md:rounded-2xl">
+                        <img src="images/gallery_img6.webp" alt="Instagram Post 3" class="w-full h-full object-cover">
+                        <div class="insta-overlay"><svg class="w-8 h-8 text-white opacity-80" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path></svg></div>
+                    </a>
+                    <a href="https://www.instagram.com/awaji_holoholo/" target="_blank" class="insta-tile rounded-lg md:rounded-2xl">
+                        <img src="images/gallery_img9.webp" alt="Instagram Post 4" class="w-full h-full object-cover">
+                        <div class="insta-overlay"><svg class="w-8 h-8 text-white opacity-80" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path></svg></div>
+                    </a>
+                    <a href="https://www.instagram.com/awaji_holoholo/" target="_blank" class="insta-tile rounded-lg md:rounded-2xl">
+                        <img src="images/gallery_img11.webp" alt="Instagram Post 5" class="w-full h-full object-cover">
+                        <div class="insta-overlay"><svg class="w-8 h-8 text-white opacity-80" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path></svg></div>
+                    </a>
+                    <a href="https://www.instagram.com/awaji_holoholo/" target="_blank" class="insta-tile rounded-lg md:rounded-2xl">
+                        <img src="images/around-bg.webp" alt="Instagram Post 6" class="w-full h-full object-cover">
+                        <div class="insta-overlay"><svg class="w-8 h-8 text-white opacity-80" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path></svg></div>
+                    </a>
+                </div>
+
+                <a href="https://www.instagram.com/awaji_holoholo/" target="_blank" class="inline-block mt-12 border border-accent text-accent px-10 py-4 rounded-full font-bold text-xs tracking-[0.2em] hover:bg-accent hover:text-white transition-all uppercase text-shadow-none">
                     Follow Our Journey
                 </a>
             </div>
         </section>
 
-        <!-- Map Section -->
+        <!-- Location Section -->
         <section id="location" class="section-padding px-6 bg-white text-left">
             <div class="max-w-7xl mx-auto">
                 <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-                    <div class="lg:w-1/3 fade-up text-left">
+                    <div class="lg:w-1/3 fade-up">
                         <span class="font-italic text-accent text-2xl md:text-3xl mb-4 block text-shadow-none">Location</span>
                         <h3 class="text-2xl md:text-3xl font-mincho font-bold mb-6 tracking-wide text-gray-800">淡路島・西海岸のほとり</h3>
                         <p class="text-sm text-gray-500 leading-loose mb-10 font-light">
@@ -457,32 +501,32 @@
 
         <!-- Final CTA Footer -->
         <footer id="booking" class="section-padding px-6 bg-white border-t border-gray-50 text-center pb-40">
-            <div class="max-w-4xl mx-auto fade-up text-center">
-                <h3 class="text-3xl md:text-5xl font-mincho font-bold mb-10 text-gray-800 leading-[1.3] text-shadow-none">
+            <div class="max-w-4xl mx-auto fade-up">
+                <h3 class="text-3xl md:text-5xl font-mincho font-bold mb-10 text-gray-800 leading-[1.3] text-shadow-none text-center">
                     愛犬の、弾けるような<br>笑顔が見たくなったら。
                 </h3>
-                <p class="mb-14 text-gray-500 leading-loose text-base md:text-lg font-light text-shadow-none">
+                <p class="mb-14 text-gray-500 leading-loose text-base md:text-lg font-light text-center text-shadow-none">
                     1日1組様だけの限定席。室内外どこにいても、家族全員が「同じ景色」を楽しめる空間をご用意してお待ちしております。
                 </p>
                 <a href="https://awaji-holoholo.jp/" target="_blank" class="pulse-btn inline-block bg-accent text-white px-12 md:px-20 py-7 md:py-8 rounded-full font-bold text-lg md:text-xl hover:bg-black transition-all shadow-xl text-shadow-none">
                     空室状況を確認・予約する
                 </a>
 
-                <div class="mt-24 md:mt-32 pt-16 md:pt-20 border-t border-gray-50">
-                    <p class="text-[10px] tracking-[0.4em] text-gray-400 uppercase mb-12 font-bold tracking-widest text-shadow-none">Partner Brands</p>
+                <div class="mt-24 md:mt-32 pt-16 md:pt-20 border-t border-gray-50 text-shadow-none">
+                    <p class="text-[9px] tracking-[0.4em] text-gray-400 uppercase mb-12 font-bold tracking-widest text-shadow-none">Partner Brands</p>
                     <div class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-40 grayscale hover:opacity-100 transition duration-700">
-                        <a href="https://sugomori.hyogo.jp/" target="_blank" class="hover:grayscale-0 transition duration-500"><img src="images/sugomori-logo.webp" alt="SUGOMoRI Resort" class="h-14 md:h-20"></a>
-                        <a href="https://kona-resort.jp/" target="_blank" class="hover:grayscale-0 transition duration-500"><img src="images/konalogo1.webp" alt="KONA RESORT" class="h-14 md:h-20"></a>
+                        <a href="https://sugomori.hyogo.jp/" target="_blank" class="hover:grayscale-0 transition duration-500"><img src="images/sugomori-logo.webp" alt="SUGOMoRI Logo" class="h-14 md:h-20"></a>
+                        <a href="https://kona-resort.jp/" target="_blank" class="hover:grayscale-0 transition duration-500"><img src="images/konalogo1.webp" alt="KONA RESORT Logo" class="h-14 md:h-20"></a>
                     </div>
                     <div class="mt-20">
-                        <img src="images/logo7.webp" alt="Holoholo Brand" class="h-10 md:h-12 mx-auto mb-6 opacity-70 text-shadow-none">
-                        <p class="text-[9px] text-gray-300 font-light tracking-widest uppercase tracking-widest text-shadow-none">&copy; Dog Villa Holoholo All Rights Reserved.</p>
+                        <img src="images/logo7.webp" alt="Brand Logo" class="h-10 md:h-12 mx-auto mb-6 opacity-70">
+                        <p class="text-[9px] text-gray-300 font-light tracking-widest uppercase tracking-widest">&copy; Dog Villa Holoholo All Rights Reserved.</p>
                     </div>
                 </div>
             </div>
         </footer>
 
-        <!-- Mobile Sticky CTA (Safe Fix) -->
+        <!-- Mobile Sticky CTA (Final Safe Fix) -->
         <div class="sticky-cta-mobile md:hidden">
             <a href="https://awaji-holoholo.jp/" target="_blank" class="pulse-btn w-full bg-accent text-white rounded-full font-bold shadow-2xl tracking-widest uppercase text-shadow-none">
                 RESERVE NOW
