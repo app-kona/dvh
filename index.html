@@ -39,6 +39,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         @media (max-width: 768px) { .section-padding { padding-top: 6rem; padding-bottom: 6rem; } }
 
         .hero-gradient { background: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.45)); }
+
+        /* Hero slideshow */
+        .hero-slide { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.06); transition: opacity 1.6s ease-in-out; will-change: opacity; }
+        .hero-slide.is-active { opacity: 1; animation: heroKenburns 6s ease-out forwards; }
+        @keyframes heroKenburns { from { transform: scale(1.06); } to { transform: scale(1.13); } }
+        @media (prefers-reduced-motion: reduce) { .hero-slide { transition: opacity 0.6s ease; } .hero-slide.is-active { animation: none; } }
         .text-accent { color: var(--accent); }
         .bg-accent { background-color: var(--accent); }
         .bg-soft { background-color: var(--bg-cream); }
@@ -143,8 +149,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- Hero -->
     <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 image-reveal hero-image-reveal">
-            <img src="images/top01.jpg" alt="淡路島・西海岸の貸切ドッグヴィラ Holoholo" class="w-full h-full object-cover" fetchpriority="high">
+        <div class="absolute inset-0">
+            <div class="hero-slides absolute inset-0">
+                <img src="images/top01.jpg" alt="淡路島・西海岸の貸切ドッグヴィラ Holoholo" class="hero-slide is-active" fetchpriority="high">
+                <img src="images/access-bg.webp" alt="" class="hero-slide">
+                <img src="images/around-bg.webp" alt="" class="hero-slide">
+                <img src="images/features-bg.webp" alt="" class="hero-slide">
+                <img src="images/gallery_img8.webp" alt="" class="hero-slide">
+            </div>
             <div class="absolute inset-0 hero-gradient"></div>
         </div>
         <div class="relative z-10 text-center text-white px-4 fade-up hero-fade-up">
@@ -704,6 +716,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 });
             }
             window.addEventListener('scroll', onScroll, { passive: true });
+        })();
+
+        // ===== Hero slideshow (crossfade) =====
+        (function () {
+            var slides = document.querySelectorAll('.hero-slide');
+            if (slides.length < 2) return;
+            var i = 0;
+            setInterval(function () {
+                slides[i].classList.remove('is-active');
+                i = (i + 1) % slides.length;
+                slides[i].classList.add('is-active');
+            }, 5000);
         })();
 
         // ===== Animations =====
