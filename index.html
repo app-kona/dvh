@@ -45,6 +45,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .hero-slide.is-active { opacity: 1; animation: heroKenburns 6s ease-out forwards; }
         @keyframes heroKenburns { from { transform: scale(1.06); } to { transform: scale(1.13); } }
         @media (prefers-reduced-motion: reduce) { .hero-slide { transition: opacity 0.6s ease; } .hero-slide.is-active { animation: none; } }
+
+        /* Hero attention pop (summer pool) */
+        .hero-pop {
+            position: absolute; z-index: 40; top: 100px; right: 14px;
+            width: 118px; height: 118px; border-radius: 9999px;
+            display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+            color: #fff; background: radial-gradient(circle at 32% 26%, #2bb6c4, #0e7c86);
+            border: 3px solid rgba(255,255,255,0.9);
+            box-shadow: 0 12px 26px rgba(0,0,0,0.30);
+            transform: rotate(-8deg); animation: popFloat 2.6s ease-in-out infinite;
+        }
+        .hero-pop::before { content: ""; position: absolute; inset: -7px; border-radius: 9999px; border: 2px dashed rgba(255,255,255,0.65); animation: popSpin 14s linear infinite; }
+        .hero-pop:hover { filter: brightness(1.05); }
+        @media (min-width: 768px) { .hero-pop { top: 116px; right: 44px; width: 156px; height: 156px; } }
+        @keyframes popFloat { 0%,100% { transform: rotate(-8deg) translateY(0); } 50% { transform: rotate(-8deg) translateY(-7px); } }
+        @keyframes popSpin { to { transform: rotate(360deg); } }
+        @media (prefers-reduced-motion: reduce) { .hero-pop { animation: none; } .hero-pop::before { animation: none; } }
         .text-accent { color: var(--accent); }
         .bg-accent { background-color: var(--accent); }
         .bg-soft { background-color: var(--bg-cream); }
@@ -161,6 +178,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="absolute inset-0 hero-gradient"></div>
         </div>
+        <a href="#pool" data-cta="hero_pop" data-cta-type="promo" class="hero-pop">
+            <span class="text-[9px] md:text-[11px] font-bold tracking-widest">NEW</span>
+            <span class="font-mincho font-bold text-base md:text-2xl leading-none mt-0.5">夏限定</span>
+            <span class="text-[10px] md:text-sm font-bold leading-tight mt-1">ドッグプール</span>
+            <span class="text-[9px] md:text-[11px] font-bold mt-1.5 bg-white text-[#0e7c86] rounded-full px-2 py-0.5">7月START</span>
+        </a>
         <div class="relative z-10 text-center text-white px-4 fade-up hero-fade-up">
             <span class="inline-block mb-6 text-xs md:text-sm font-bold letter-spacing-huge font-mincho text-shadow-elegant opacity-90 uppercase tracking-[0.4em]">Awajishima West Coast</span>
             <!-- FV Variant A1 (default). 差し替え用バリアントA2は下のコメント参照 -->
